@@ -72,7 +72,7 @@
       background: linear-gradient(#7BAABE,#969AC6);
   }
   #slide1 img{
-    width: 100%;  
+    width: 100vw;
   }
   #slide2{
       background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
@@ -83,12 +83,13 @@
     background-color: white !important;
   }
   #section2 .intro img{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 
   }
   #section3 .intro img{
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
   }
 
   /* Overwriting styles for control arrows for slides
