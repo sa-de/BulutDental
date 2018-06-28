@@ -1,0 +1,121 @@
+/* https://codepen.io/CreativeJuiz/pen/dYpObx */
+.icon-scroll {
+	position: absolute;
+	top: 92%;
+	left: 50%;
+	margin-left: -8px;
+	width: 16px;
+	height: 50px;
+	z-index: 99999;
+	-webkit-transition: opacity: .4s;
+}
+.icon-scroll span {
+	display: block;
+	width: 5px;
+	height: 5px;
+	border-right: 1px solid rgba(0,0,0, .8);
+	border-bottom: 1px solid rgba(0,0,0, .8);
+	margin: 0 0 2px 5px;
+
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+    -webkit-animation-direction: alternate;
+	animation-direction: alternate;
+}
+
+.icon-scroll .a1 {
+	margin-top: 6px;
+	-webkit-animation-delay: .1s;
+	-moz-animation-delay: .1s;
+	animation-delay: .1s;
+}
+
+.icon-scroll .a2 {
+	-webkit-animation-delay: .2s;
+	-moz-animation-delay: .2s;
+	animation-delay: .2s;
+}
+
+.icon-scroll .a3 {
+	-webkit-animation-delay: .3s;
+	-moz-animation-delay: .3s;
+	animation-delay: .3s;
+}
+
+.icon-scroll .mouse {
+	height: 22px;
+	width: 14px;
+	border: 1px solid rgba(0,0,0,.8);
+	border-radius: 10px;
+}
+
+.icon-scroll .wheel {
+  position: relative;
+  display: block;
+  height: 3px;
+  width: 3px;
+  margin: 2px auto 0;
+  background: rgba(0,0,0,.8);
+  -webkit-animation: mouse-wheel 1.2s ease infinite;
+  -moz-animation: mouse-wheel 1.2s ease infinite;
+  animation: mouse-wheel 1.2s ease infinite;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes mouse-wheel {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(5px);
+		transform: translateY(5px);
+	}
+}
+@-moz-keyframes mouse-wheel {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(5px);
+		transform: translateY(5px);
+	}
+}
+@keyframes mouse-wheel {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+}
+
+@-webkit-keyframes mouse-scroll {
+	0%   { opacity: 0;}
+	50%  { opacity: .5;}
+	100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
+}
