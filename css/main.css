@@ -71,10 +71,24 @@
       background: -webkit-linear-gradient(#7BAABE, #969AC6);
       background: linear-gradient(#7BAABE,#969AC6);
   }
+  #slide1 img{
+    width: 100%;  
+  }
   #slide2{
       background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
       background: -webkit-linear-gradient(#92a1ca, #76c2bd);
       background: linear-gradient(#92a1ca,#76c2bd);
+  }
+  #section2 .intro{
+    background-color: white !important;
+  }
+  #section2 .intro img{
+    width: 100%;
+    height: 100vh;
+
+  }
+  #section3 .intro img{
+    width: 100%;
   }
 
   /* Overwriting styles for control arrows for slides
