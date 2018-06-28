@@ -128,7 +128,7 @@ iframe {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
+[ Utility ]*/wrap-login100
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 14px;
@@ -179,6 +179,7 @@ iframe {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
+  padding: 20px;
 }
 
 

@@ -13,41 +13,36 @@
     <link href="https://eistatistik.com/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://eistatistik.com/vendor/hover/css/hover.css" rel="stylesheet">
     <link href="https://eistatistik.com/css/animate.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <link rel="stylesheet" type="text/css" href="css/scroll.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/form.css" />
-    <link rel="stylesheet" type="text/css" href="css/scroll.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon-new.png">
 </head>
+
 <body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
-    <nav class="navbar navbar-default navbar-fixed-top scrollspy" style="border: 0; border-bottom: 1px solid #6b9fc5;  background: transparent; height: 70px;">
+    <nav class="navbar navbar-default navbar-fixed-top scrollspy" id="navbarozellik">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
             <a class="navbar-brand" href="#">
                 <img src="img/logo-white-text.png" height="35px">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav pull-right">
-            <li style="padding-top: 10px;"><a id="hebelehubele" href="#pageHome" style="color: #fff;">ANA SAYFA</a></li>
-            <li style="padding-top: 10px;"><a id="hebelehubele" href="#pageFeatures" style="color: #fff;">ÖZELLİKLER</a></li>
-            <li style="padding-top: 10px;"><a id="hebelehubele" href="#pageFAQ" style="color: #fff;">SSS</a></li>
-            <li style="padding-top: 10px;"><a id="hebelehubele" href="#pageContact" style="color: #fff;">İLETİŞİM</a></li>
+            <li id="menuhover"><a href="#pageHome" style="color: #fff;">ANA SAYFA</a></li>
+            <li id="menuhover"><a href="#pageFeatures" style="color: #fff;">ÖZELLİKLER</a></li>
+            <li id="menuhover"><a href="#pageFAQ" style="color: #fff;">SSS</a></li>
+            <li id="menuhover"><a href="#pageContact" style="color: #fff;">İLETİŞİM</a></li>
           </ul>
         </div>
     </div>
@@ -56,31 +51,23 @@
     <div class="section" id="section0">        
         <div class="col-md-offset-1 col-md-5 col-sm-7 col-xs-12">
             <div class="banner-text">
-                <h1 style="font-size: 54px; margin: 50px 0 0 0;">Bulut <strong>Diş Kliniği</strong> <br>Otomasyonu</h1>
-                <br><p style="font-size: 30px;line-height:1.2; color: #f9f9f9;">Her zaman, her yerde, her cihazla <br>
+                <h1>Bulut <strong>Diş Kliniği</strong> <br>Otomasyonu</h1>
+                <br><p>Her zaman, her yerde, her cihazla <br>
                 güvenli erişim sağlayın.</p>
                 <br>
                 <ul>
-                    <li id="hubelehebele"><i class="fa fa-user"></i> Hasta Takip Modülü</li>
-                    <li id="hubelehebele"><i class="fa fa-calendar"></i> Randevu Modülü</li>
-                    <li id="hubelehebele"><i class="fa fa-credit-card"></i> Muhasebe Modülü</li>
-                    <li id="hubelehebele"><i class="fa fa-shopping-cart"></i> Stok Modülü</li>
-                    <li id="hubelehebele"><i class="fa fa-pie-chart"></i> Raporlama Modülü</li>
-                    <li id="hubelehebele"><i class="fa fa-whatsapp"></i> CRM Modülü</li>
-                    <li id="hubelehebele"><i class="fa fa-flask"></i> Laboratuvar İstek Modülü</li>
-                    <li id="hubelehebele"><i class="fa fa-cog"></i> Firma Klinik Modülü</li>   
+                    <li><i class="fa fa-user"></i> Hasta Takip Modülü</li>
+                    <li><i class="fa fa-calendar"></i> Randevu Modülü</li>
+                    <li><i class="fa fa-credit-card"></i> Muhasebe Modülü</li>
+                    <li><i class="fa fa-shopping-cart"></i> Stok Modülü</li>
+                    <li><i class="fa fa-pie-chart"></i> Raporlama Modülü</li>
+                    <li><i class="fa fa-whatsapp"></i> CRM Modülü</li>
+                    <li><i class="fa fa-flask"></i> Laboratuvar İstek Modülü</li>
+                    <li><i class="fa fa-cog"></i> Firma Klinik Modülü</li>   
                     <!--li><i class="fa fa-shield"></i> Güvenlik</li>   
                     <li><i class="fa fa-picture-o"></i> Röntgen ve Dijital Görüntüleme</li-->
-                    <li id="hubelehebele"><i class="fa fa-plug"></i> Entegrasyonlar</li>   
+                    <li><i class="fa fa-plug"></i> Entegrasyonlar</li>   
                 </ul>
-                <!--div class="btn-holder">
-                    <a class="btn btn-lg btn-success btn-outline hvr-float-shadow" href="#" style="width: 180px; border-radius: 0px;">
-                        </i>ŞİMDİ <b>KEŞFEDİN</b>
-                    </a>
-                </div-->
-                    <!--a class="btn btn-lg btn-success btn-outline hvr-float-shadow" href="#" style="width: 180px; border-radius: 5px;">
-                        <i class="fa fa-skyatlas fa-3x pull-left"></i>ŞİMDİ <br><b>KAYDOL</b>
-                    </a-->
             </div>
         </div>
 

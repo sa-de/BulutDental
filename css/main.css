@@ -23,7 +23,7 @@
   /* Defining each sectino background and styles
   * --------------------------------------- */
   #section0 {
-      background-image: url(/img/bgH3_85.jpg);
+      background-image: url(../img/bgH3_85.jpg);
 
       text-align: left;
       /*background: #246bad;
@@ -122,16 +122,27 @@
       display:inline-block;
       position:relative;
   }
-  #hebelehubele:hover{
+  #menuhover{
+    padding-top: 10px;
+  }
+  #menuhover:hover{
     background: #009ABB;
   }
-  #hubelehebele{
+  .banner-text ul li{
     transition: transform .4s;
     transform-origin: 0 0;
   }
-  #hubelehebele:hover{
+  .banner-text ul li:hover{
     transform-origin: 0 0;
     transform: scale(1.1);
+  }
+  .banner-text h1{
+    font-size: 54px; 
+    margin: 50px 0 0 0;
+  }
+  .banner-text p{
+    font-size: 30px;
+    line-height:1.2; color: #f9f9f9;
   }
   .banner-text li {
       font-family: Poppins-Regular;
@@ -143,4 +154,10 @@
 
   .banner-text li .fa {
       margin: 0 20px 0 0;
+  }
+  #navbarozellik{
+    border: 0 !important;
+    border-bottom: 1px solid #6b9fc5 !important; 
+    background: transparent !important;
+    height: 70px !important;
   }

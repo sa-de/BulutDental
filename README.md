@@ -1,2 +1,0 @@
-# Bulut Dental
-Hello
