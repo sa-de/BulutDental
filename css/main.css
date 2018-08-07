@@ -140,10 +140,29 @@
   #section2 .intro{
     background-color: white !important;
   }
-  #section2 .intro img{
-    width: 100vw;
+  .intro .faqwrapper{
+    display: grid;
+    grid-template-columns: 5fr 1fr 3fr 1fr;
+    grid-template-rows: 70px 100px 1fr ;
     height: 100vh;
-
+    color: white;
+    background-color: rgb(6, 77, 94);
+}
+  .faqwrapper .imagefaq{
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    background: url(../img/faq.jpg) bottom center no-repeat;
+    background-size: cover; 
+}
+  .faqwrapper .faqcontent{
+    grid-column: 3;
+    grid-row: 3 / span 3;
+}
+  .faqwrapper .faqbaslik{
+    grid-column: 3;
+    grid-row: 2 ;
+    font-size: 200%;
+    line-height: 380%;
   }
   #section3 .intro img{
     width: 100vw;

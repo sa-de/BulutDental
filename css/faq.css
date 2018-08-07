@@ -1,0 +1,46 @@
+
+  /* Styles for Accordion */
+  .toggle:last-child {
+    border-bottom: 1px solid #dddddd;
+  }
+  .toggle .toggle-title {
+    position: relative;
+    display: block;
+    border-top: 1px solid #dddddd;
+    margin-bottom: 6px;
+  }
+  .toggle .toggle-title h3 {
+    font-size: 20px;
+    margin: 0px;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 200;
+  }
+  .toggle .toggle-inner {
+    padding: 7px 25px 10px 25px;
+    display: none;
+    margin: -7px 0 6px;
+  }
+  .toggle .toggle-inner div {
+    max-width: 100%;
+  }
+  .toggle .toggle-title .title-name {
+    display: block;
+    padding: 25px 25px 14px;
+  }
+  .toggle .toggle-title a i {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+  .toggle .toggle-title i {
+    position: absolute;
+    background: url("http://arielbeninca.com/Storage/plus_minus.png") 0px -24px no-repeat;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+    margin: 20px;
+    right: 0;
+  }
+  .toggle .toggle-title.active i {
+    background: url("http://arielbeninca.com/Storage/plus_minus.png") 0px 0px no-repeat;
+  }
