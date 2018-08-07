@@ -164,11 +164,6 @@
     font-size: 200%;
     line-height: 380%;
   }
-  #section3 .intro img{
-    width: 100vw;
-    height: 100vh;
-  }
-
   /* Overwriting styles for control arrows for slides
   * --------------------------------------- */
   .controlArrow.prev {
