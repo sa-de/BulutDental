@@ -1,14 +1,12 @@
-
-  
   .pricingWrapper {
-    background: #2744da;
+    background: #2980b9;
     color: #7a90ff;
-    padding: 2em 0 8em;
-    min-height: 100vh;
+    height: 70vh;
     position: relative;
+    display: grid;
+    align-items: center;
     -webkit-font-smoothing: antialiased;
-  }
-  
+  }  
   .pricing {
     display: -webkit-flex;
     display: flex;

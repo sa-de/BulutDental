@@ -54,9 +54,7 @@
       background: linear-gradient(#969AC6,#636F8F);
   }
   #section2{
-      background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
-      background: -webkit-linear-gradient(#969AC6, #636F8F);
-      background: linear-gradient(#969AC6,#636F8F);
+    background: #2980b9;
   }
   #section3{
       background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
