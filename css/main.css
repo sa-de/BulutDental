@@ -48,27 +48,16 @@
       opacity: .8; 
   }*/
 
-  #section1{
-      background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
-      background: -webkit-linear-gradient(#969AC6, #636F8F);
-      background: linear-gradient(#969AC6,#636F8F);
-  }
   #section2{
-    background: #2980b9;
+    background: #34ace0;
   }
-  #section3{
-      background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
-      background: -webkit-linear-gradient(#969AC6, #636F8F);
-      background: linear-gradient(#969AC6,#636F8F);
+  #section4{
+    background: #000040;
   }
 
   /*Adding background for the slides
   * --------------------------------------- */
-  #slide1{
-      background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
-      background: -webkit-linear-gradient(#7BAABE, #969AC6);
-      background: linear-gradient(#7BAABE,#969AC6);
-  }
+
   #slide1 .slidewrapper{
       display: grid;
       grid-template-columns: 1fr 300px 50px 350px 50px 300px 1fr;
@@ -76,7 +65,7 @@
       grid-gap: 5px;
       height: 100vh;
       color: white;
-      background-color: #009ABB;
+      background-color: #00BCD4;
   }
   .slidewrapper .nav{
     grid-column: 1 / -1 ;
