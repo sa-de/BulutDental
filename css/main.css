@@ -127,7 +127,7 @@
   #section2 .intro{
     background-color: white !important;
   }
-  .intro .faqwrapper{
+  .faqwrapper{
     display: grid;
     grid-template-columns: 5fr 1fr 3fr 1fr;
     grid-template-rows: 70px 100px 1fr ;
@@ -150,6 +150,43 @@
     grid-row: 2 ;
     font-size: 200%;
     line-height: 380%;
+  }
+  .contactWrapper{
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-rows: 70px 100px 5fr 1fr ;
+    height: 100vh;
+    color: white;
+  }
+  .contactTanitim{
+    grid-column: 2;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+  }
+  .tanitimBaslik{
+    grid-row: 1;
+    background: url(../img/logo-white-text.png) center no-repeat;
+    background-size: 100px; 
+  }
+  .tanitimIcerik{
+    grid-row: 2;
+    padding: 10%;
+    line-height: 170%;
+  }
+  .tanitimSosyalMedya{
+    grid-row: 3;
+  }
+  .contactForm{
+    grid-column: 3;
+    grid-row: 3;
+    padding: 10%;
+  }
+  .contactNews{
+    grid-column: 4;
+    grid-row: 3;
+    padding: 10%;
   }
   /* Overwriting styles for control arrows for slides
   * --------------------------------------- */
