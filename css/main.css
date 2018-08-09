@@ -156,7 +156,7 @@
   .contactWrapper{
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-    grid-template-rows: 70px 70px 5fr 1fr ;
+    grid-template-rows: 70px 70px 1fr;
     height: 100vh;
     color: white;
   }
@@ -164,17 +164,18 @@
     grid-column: 2;
     grid-row: 3;
     display: grid;
+    grid-gap: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 3fr 4fr;
   }
   .tanitimBaslik{
     grid-row: 1;
-    background: url(../img/logo-white-text.png) center no-repeat;
+    background: url(../img/logo-white-text.png) center top no-repeat;
     background-size: 100px; 
   }
   .tanitimIcerik{
     grid-row: 2;
-    padding: 10%;
+    padding: 0 10% 10% 10%;
     line-height: 170%;
   }
   .tanitimSosyalMedya{
@@ -183,7 +184,7 @@
   .contactForm{
     grid-column: 3;
     grid-row: 3;
-    padding: 10%;
+    padding: 0 10% 10% 10%;
   }
   .contactFormInput{
     max-width:420px; 
@@ -235,7 +236,7 @@
   .contactNews{
     grid-column: 4;
     grid-row: 3;
-    padding: 10%;
+    padding: 0 10% 10% 10%;
   }
   /* Overwriting styles for control arrows for slides
   * --------------------------------------- */
