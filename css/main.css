@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
   body, html {
       font-size: 14px;
       font-family: 'Open Sans', sans-serif;
@@ -154,7 +156,7 @@
   .contactWrapper{
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-    grid-template-rows: 70px 100px 5fr 1fr ;
+    grid-template-rows: 70px 70px 5fr 1fr ;
     height: 100vh;
     color: white;
   }
@@ -183,6 +185,53 @@
     grid-row: 3;
     padding: 10%;
   }
+  .contactFormInput{
+    max-width:420px; 
+    margin:50px auto;
+  }
+  .feedback-input {
+    color:white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid rgb(6, 77, 94);
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+  }
+  
+  .feedback-input:focus { border:2px solid rgb(6, 77, 94); }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+  
+  .gonder {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:rgb(6, 77, 94);
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:18px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+    text-align: center;
+  }
+  .gonder:hover { background:rgb(6, 77, 94); }
+
   .contactNews{
     grid-column: 4;
     grid-row: 3;

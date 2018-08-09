@@ -309,17 +309,17 @@
                 </div>
                 <div class="contactForm">
                     <span style="font-weight: bold;font-size: 130%;">İLETİŞİM FORMU</span> 
-                    <br><br>
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <br>
-                    <input type="button" value="Mesaj Gönder">
+                    <form class="contactFormInput">      
+                        <input name="name" type="text" class="feedback-input" placeholder="İsim" />   
+                        <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                        <textarea name="text" class="feedback-input" placeholder="Yorum"></textarea>
+                        <input type="button" class="gonder" value="GÖNDER"/>
+                    </form>                
                 </div>
                 <div class="contactNews">
                     <span style="font-weight: bold;font-size: 130%;">SON HABERLER</span>
                         <br><br><br>
-                        Loading..
+                        loading..
                 </div>
             </div>
         </div>
