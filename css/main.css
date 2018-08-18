@@ -50,10 +50,10 @@
       opacity: .8; 
   }*/
 
-  #section2{
+  #section3{
     background: #34ace0;
   }
-  #section4{
+  #section5{
     background: #000040;
   }
 
@@ -126,7 +126,7 @@
       background: -webkit-linear-gradient(#92a1ca, #76c2bd);
       background: linear-gradient(#92a1ca,#76c2bd);
   }
-  #section2 .intro{
+  #section3 .intro{
     background-color: white !important;
   }
   .faqwrapper{
@@ -238,26 +238,16 @@
     grid-row: 3;
     padding: 0 10% 10% 10%;
   }
-  #fp-nav ul li a span, 
-  .fp-slidesNav ul li a span {
-    background: white;
-    width: 8px;
-    height: 8px;
-    margin: -4px 0 0 -4px;
+  .contactNews span{
+  font-weight: bold;
+  font-size: 200%;
+  transition: all 1.1s ease-out;
+  -webkit-transition: all 1.1s ease-out;
+}
+  .fp-viewing-pageContact .contactNews span{
+    font-size: 130%
   }
-  
-  #fp-nav ul li a.active span, 
-  .fp-slidesNav ul li a.active span, 
-  #fp-nav ul li:hover a.active span, 
-  .fp-slidesNav ul li:hover a.active span {
-    width: 16px;
-    height: 16px;
-    margin: -8px 0 0 -8px;
-    background: transparent;
-    box-sizing: border-box;
-    border: 1px solid #24221F;
-  }
-  
+
   /* Overwriting styles for control arrows for slides
   * --------------------------------------- */
   .controlArrow.prev {

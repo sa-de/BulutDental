@@ -43,6 +43,7 @@
           <ul class="nav navbar-nav pull-right">
             <li id="menuhover"><a href="#pageHome" style="color: #fff;">ANA SAYFA</a></li>
             <li id="menuhover"><a href="#pageFeatures" style="color: #fff;">ÖZELLİKLER</a></li>
+            <li id="menuhover"><a href="#pageDifference" style="color: #fff;">FARKIMIZ</a></li>
             <li id="menuhover"><a href="#pagePricing" style="color: #fff;">FİYATLANDIRMA</a></li>
             <li id="menuhover"><a href="#pageFAQ" style="color: #fff;">SSS</a></li>
             <li id="menuhover"><a href="#pageContact" style="color: #fff;">İLETİŞİM</a></li>
@@ -167,6 +168,38 @@
         </div>
     </div>
     <div class="section" id="section2">
+        <div class="slide" id="slide1">
+            <div class="slidewrapper">
+                <div class="nav"></div>
+                <div class="baslik">Farkımız</div>
+                <div class="yazi1">
+                    <span style="font-weight: bold;font-size: 1.3em;">Başlık</span><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum vestibulum pulvinar. Donec rhoncus eget felis nec porta. </div>
+                <div class="yazi2">
+                    <span style="font-weight: bold;font-size: 1.3em;">Başlık</span><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum vestibulum pulvinar. Donec rhoncus eget felis nec porta. 
+                </div>
+                <div class="yazi3">
+                    <span style="font-weight: bold;font-size: 1.3em;">Başlık</span><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum vestibulum pulvinar. Donec rhoncus eget felis nec porta. 
+                </div>
+                <div class="yazi4">
+                        <span style="font-weight: bold;font-size: 1.3em;">Başlık</span><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum vestibulum pulvinar. Donec rhoncus eget felis nec porta. 
+                    </div>
+                <div class="yazi5">
+                    <span style="font-weight: bold;font-size: 1.3em;">Başlık</span><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum vestibulum pulvinar. Donec rhoncus eget felis nec porta. 
+                </div>
+                <div class="yazi6">
+                    <span style="font-weight: bold;font-size: 1.3em;">Başlık</span><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum vestibulum pulvinar. Donec rhoncus eget felis nec porta. 
+                </div>
+                <div class="dis"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section3">
             <div class="intro">
             <div class="pricingWrapper">
             <div class='pricing pricing-palden'>
@@ -235,7 +268,7 @@
             </div>
         </div>
     
-    <div class="section" id="section3">
+    <div class="section" id="section4">
         <div class="intro">
             <div class="faqwrapper">
                 <div class="imagefaq"></div>
@@ -287,7 +320,7 @@
             </div>
         </div>
     </div>
-    <div class="section" id="section4">
+    <div class="section" id="section5">
         <div class="intro">
             <div class="contactWrapper">
                 <div class="contactTanitim">
@@ -316,7 +349,7 @@
                     </form>                
                 </div>
                 <div class="contactNews">
-                    <span style="font-weight: bold;font-size: 130%;">SON HABERLER</span>
+                    <span>SON HABERLER</span>
                         <br><br><br>
                         loading..
                 </div>
@@ -347,10 +380,11 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                anchors: ['pageHome', 'pageFeatures','pagePricing', 'pageFAQ', 'pageContact'],
+                anchors: ['pageHome', 'pageFeatures','pageDifference','pagePricing', 'pageFAQ', 'pageContact'],
                 navigation: true,
                 navigationPosition: 'right',
-                navigationTooltips: ['Ana Sayfa', 'Özellikler','Fiyatlandırma', 'SSS', 'İletişim']
+                navigationTooltips: ['Ana Sayfa', 'Özellikler','Farkımız','Fiyatlandırma', 'SSS', 'İletişim'],
+                scrollOverflow: true
             });
 
             $('#btnSubmit').prop("disabled", true);
