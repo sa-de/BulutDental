@@ -16,42 +16,44 @@
       padding:0;
   }
 
+  #fp-nav ul li a span, 
+  .fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+  }
+  
+  #fp-nav ul li a.active span, 
+  .fp-slidesNav ul li a.active span, 
+  #fp-nav ul li:hover a.active span, 
+  .fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid #24221F;
+  }
   /* Centered texts in each section
   * --------------------------------------- */
   .section{
       text-align: center;
   }
 
-  /* Defining each sectino background and styles
-  * --------------------------------------- */
   #section0 {
-      background-image: url(../img/bgH3_85.jpg);
-
-      text-align: left;
-      /*background: #246bad;
-      background: -moz-linear-gradient(top, #246bad 0%, #00c8c8 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #246bad), color-stop(100%, #00c8c8));
-      background: -webkit-linear-gradient(top, #246bad 0%, #00c8c8 100%);
-      background: -o-linear-gradient(top, #246bad 0%, #00c8c8 100%);
-      background: -ms-linear-gradient(top, #246bad 0%, #00c8c8 100%);
-      background: linear-gradient(to bottom, #246bad 0%, #00c8c8 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#246bad', endColorstr='#00c8c8',GradientType=0 );*/
-      opacity: .8;
+    background-image: url(../img/bgH3_85.jpg);
+    text-align: left;
+    opacity: .8;
   }
-
-  /*#section0:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient(to bottom, #246bad 0%, #00c8c8 50%);
-      opacity: .8; 
-  }*/
-
+  #section1 {
+    background-color: #2890b7;
+}
+  #section2 {
+    background-color: #195a72;
+  }
   #section3{
-    background: #34ace0;
+    background: #178ab4;
   }
   #section5{
     background: #000040;
@@ -60,14 +62,13 @@
   /*Adding background for the slides
   * --------------------------------------- */
 
-  #slide1 .slidewrapper{
+  .slidewrapper{
       display: grid;
       grid-template-columns: 1fr 300px 50px 350px 50px 300px 1fr;
       grid-template-rows: 70px 80px 25px 150px 150px 150px ;
       grid-gap: 5px;
       height: 100vh;
       color: white;
-      background-color: #00BCD4;
   }
   .slidewrapper .nav{
     grid-column: 1 / -1 ;
@@ -125,9 +126,6 @@
       background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
       background: -webkit-linear-gradient(#92a1ca, #76c2bd);
       background: linear-gradient(#92a1ca,#76c2bd);
-  }
-  #section3 .intro{
-    background-color: white !important;
   }
   .faqwrapper{
     display: grid;
