@@ -40,7 +40,6 @@
   .section{
       text-align: center;
   }
-
   #section0 {
     background-image: url(../img/bgH3_85.jpg);
     text-align: left;
@@ -157,8 +156,8 @@
   }
   .contactWrapper{
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-    grid-template-rows: 70px 70px 1fr;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 8fr;
     height: 100vh;
     color: white;
   }
@@ -234,21 +233,6 @@
     text-align: center;
   }
   .gonder:hover { background:rgb(6, 77, 94); }
-
-  .contactNews{
-    grid-column: 4;
-    grid-row: 3;
-    padding: 0 10% 10% 10%;
-  }
-  .contactNews span{
-  font-weight: bold;
-  font-size: 200%;
-  transition: all 1.1s ease-out;
-  -webkit-transition: all 1.1s ease-out;
-}
-  .fp-viewing-pageContact .contactNews span{
-    font-size: 130%
-  }
 
   /* Overwriting styles for control arrows for slides
   * --------------------------------------- */
@@ -333,4 +317,17 @@
     border-bottom: 1px solid #6b9fc5 !important; 
     background: transparent !important;
     height: 70px !important;
+  }
+
+  /* Media Screen
+  * --------------------------------------- */
+
+    /* On screens that are 992px or less, set the background color to blue */
+  @media screen and (max-width: 992px) {
+
+  }
+
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+
   }

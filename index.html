@@ -331,9 +331,8 @@
                     </div>
                     <div class="tanitimSosyalMedya">
                                   <ul class="social-networks spin-icon">
-                                    <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li>
                                     <li><a href="https://www.facebook.com/" class="icon-facebook">Facebook</a></li>
-                                    <li><a href="https://pinterest.com" class="icon-pinterest">Pinterest</a></li>
+                                    <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li>
                                     <li><a href="https://instagram.com" class="icon-instagram">Instagram</a></li>
                                   </ul>
                     </div>
@@ -347,11 +346,6 @@
                         <textarea name="text" class="feedback-input" placeholder="Yorum"></textarea>
                         <input type="submit" class="gonder" value="GÖNDER"/>
                     </form>                
-                </div>
-                <div class="contactNews">
-                    <span>SON HABERLER</span>
-                        <br><br><br>
-                        loading..
                 </div>
             </div>
         </div>
@@ -384,7 +378,10 @@
                 navigation: true,
                 navigationPosition: 'right',
                 navigationTooltips: ['Ana Sayfa', 'Özellikler','Farkımız','Fiyatlandırma', 'SSS', 'İletişim'],
-                scrollOverflow: true
+                scrollOverflow: true,
+                responsiveWidth: 992,
+                afterResponsive: function(isResponsive){
+                }
             });
 
             $('#btnSubmit').prop("disabled", true);
