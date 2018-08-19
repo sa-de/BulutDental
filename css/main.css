@@ -15,6 +15,12 @@
       margin:0;
       padding:0;
   }
+  .navbar-custom{
+    border: 0 !important;
+    border-bottom: 1px solid #6b9fc5 !important; 
+    background: transparent !important;
+    height: 70px !important;
+  }
 
   #fp-nav ul li a span, 
   .fp-slidesNav ul li a span {
@@ -312,22 +318,20 @@
   .banner-text li .fa {
       margin: 0 20px 0 0;
   }
-  #navbarozellik{
-    border: 0 !important;
-    border-bottom: 1px solid #6b9fc5 !important; 
-    background: transparent !important;
-    height: 70px !important;
-  }
 
   /* Media Screen
   * --------------------------------------- */
 
-    /* On screens that are 992px or less, set the background color to blue */
   @media screen and (max-width: 992px) {
-
+    .navbar-custom{
+      border: 0 !important;
+      border-bottom: 1px solid #6b9fc5 !important; 
+      background: #009ABB !important;
+      height: 70px !important;
+    }
+  
   }
 
-  /* On screens that are 600px or less, set the background color to olive */
   @media screen and (max-width: 600px) {
 
   }
