@@ -69,15 +69,11 @@
 
   .slidewrapper{
       display: grid;
-      grid-template-columns: 1fr 300px 50px 350px 50px 300px 1fr;
-      grid-template-rows: 70px 80px 25px 150px 150px 150px ;
+      grid-template-columns: 1fr 5fr 1fr 6fr 1fr 5fr 1fr;
+      grid-template-rows: 3fr 4fr 1fr 6fr 6fr 6fr 2fr ;
       grid-gap: 5px;
-      height: 100vh;
+      height: 100%;
       color: white;
-  }
-  .slidewrapper .nav{
-    grid-column: 1 / -1 ;
-    grid-row: 1;
   }
   .slidewrapper .baslik{
     grid-column: 1 / -1 ;
@@ -128,7 +124,7 @@
     grid-row: 6 ;
     text-align: start;
   }
-  #slide1 img{
+  .slidewrapper img{
     width: 100vw;
   }
   #slide2{
@@ -329,6 +325,53 @@
       background: #009ABB !important;
       height: 70px !important;
     }
+    .slidewrapper{
+      display: grid;
+      grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+      grid-template-rows: 3fr 4fr 1fr 6fr 6fr 6fr 2fr ;
+      grid-gap: 5px;
+      height: 100%;
+      color: white;
+  }
+
+    .slidewrapper .yazi1{
+      grid-column: 2 ;
+      grid-row: 5 ;
+      text-align: center;
+    }
+     .slidewrapper .yazi2{
+      grid-column: 2  ;
+      grid-row: 4 ;
+      text-align: center;
+
+    }
+    .slidewrapper .yazi3{
+      grid-column: 2  ;
+      grid-row: 6 ;
+      text-align: center;
+
+    }
+    .slidewrapper .dis{
+      display: none;
+    }
+    .slidewrapper .yazi4{
+      grid-column: 4;
+      grid-row: 4 ;
+      text-align: center;
+
+    }
+    .slidewrapper .yazi5{
+      grid-column: 4 ;
+      grid-row: 5 ;
+      text-align: center;
+
+    }
+    .slidewrapper .yazi6{
+      grid-column: 4 ;
+      grid-row: 6 ;
+      text-align: center;
+    }
+  
   
   }
 
