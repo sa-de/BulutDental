@@ -377,4 +377,56 @@
 
   @media screen and (max-width: 600px) {
 
+    
+    #section1,#section2,
+    #section1 .fp-slide,#section2 .fp-slide,
+    #section1 .fp-tableCell,#section2 .fp-tableCell{
+        height: auto !important;
+    }
+    .slidewrapper{
+      display: grid;
+      grid-template-columns: 1fr 10fr 1fr;
+      grid-template-rows: 3fr 4fr 1fr 6fr 6fr 6fr 6fr 6fr 6fr 2fr ;
+      grid-gap: 5px;
+      color: white;
+  }
+
+    .slidewrapper .yazi1{
+      grid-column: 2 ;
+      grid-row: 5 ;
+      text-align: center;
+    }
+     .slidewrapper .yazi2{
+      grid-column: 2  ;
+      grid-row: 4 ;
+      text-align: center;
+
+    }
+    .slidewrapper .yazi3{
+      grid-column: 2  ;
+      grid-row: 6 ;
+      text-align: center;
+
+    }
+    .slidewrapper .dis{
+      display: none;
+    }
+    .slidewrapper .yazi4{
+      grid-column: 2;
+      grid-row: 7 ;
+      text-align: center;
+
+    }
+    .slidewrapper .yazi5{
+      grid-column: 2 ;
+      grid-row: 8 ;
+      text-align: center;
+
+    }
+    .slidewrapper .yazi6{
+      grid-column: 2 ;
+      grid-row: 9 ;
+      text-align: center;
+    }
+    
   }
