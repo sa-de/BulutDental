@@ -15,6 +15,7 @@
       margin:0;
       padding:0;
   }
+  
   .navbar-custom{
     border: 0 !important;
     border-bottom: 1px solid #6b9fc5 !important; 
@@ -66,13 +67,17 @@
 
   /*Adding background for the slides
   * --------------------------------------- */
+  #section1,#section2,#section4,#section5
+  #section1 .fp-slide,#section2 .fp-slide,#section4 .fp-slide,#section5 .fp-slide
+  #section1 .fp-tableCell,#section2 .fp-tableCell,#section4 .fp-tableCell,#section5 .fp-tableCell{
+      height: auto !important;
+  }
 
   .slidewrapper{
       display: grid;
       grid-template-columns: 1fr 5fr 1fr 6fr 1fr 5fr 1fr;
       grid-template-rows: 3fr 4fr 1fr 6fr 6fr 6fr 2fr ;
       grid-gap: 5px;
-      height: 100%;
       color: white;
   }
   .slidewrapper .baslik{
@@ -126,11 +131,6 @@
   }
   .slidewrapper img{
     width: 100vw;
-  }
-  #slide2{
-      background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
-      background: -webkit-linear-gradient(#92a1ca, #76c2bd);
-      background: linear-gradient(#92a1ca,#76c2bd);
   }
   .faqwrapper{
     display: grid;
@@ -319,6 +319,7 @@
   * --------------------------------------- */
 
   @media screen and (max-width: 992px) {
+
     .navbar-custom{
       border: 0 !important;
       border-bottom: 1px solid #6b9fc5 !important; 
@@ -377,12 +378,6 @@
 
   @media screen and (max-width: 600px) {
 
-    
-    #section1,#section2,
-    #section1 .fp-slide,#section2 .fp-slide,
-    #section1 .fp-tableCell,#section2 .fp-tableCell{
-        height: auto !important;
-    }
     .slidewrapper{
       display: grid;
       grid-template-columns: 1fr 10fr 1fr;
