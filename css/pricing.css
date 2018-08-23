@@ -27,6 +27,7 @@
     text-align: center;
     -webkit-flex: 0 1 330px;
     flex: 0 1 330px;
+    margin: 0 4vw !important;
   }
   .pricing-action {
     color: inherit;
@@ -46,7 +47,7 @@
     cursor: default;
     color: #84697c;
     background: #fff;
-    box-shadow: 0 0 10px rgba(46, 59, 125, 0.23);
+    box-shadow: 0 0 10px rgb(3, 43, 53);
     border-radius: 20px 20px 10px 10px;
     margin: 1em;
   }
@@ -59,12 +60,12 @@
     .pricing-palden .pricing__item--featured {
       margin: 0;
       z-index: 10;
-      box-shadow: 0 0 20px rgba(46, 59, 125, 0.23);
+      box-shadow: 0 0 20px rgb(3, 43, 53);
     }
   }
   .pricing-palden .pricing-deco {
     border-radius: 10px 10px 0 0;
-    background: rgba(76, 70, 101, 0.99);
+    background: rgb(6, 77, 94);
     padding: 4em 0 9em;
     position: relative;
   }
@@ -134,12 +135,12 @@
     padding: 1em 2em;
     color: #fff;
     border-radius: 30px;
-    background: #4d4766;
+    background: rgb(6, 77, 94);
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
   }
   .pricing-palden .pricing-action:hover, .pricing-palden .pricing-action:focus {
-    background-color: #100A13;
+    background-color: rgb(3, 43, 53);
   }
   
   .pricing-palden .pricing-item--featured .pricing-deco {

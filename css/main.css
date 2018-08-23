@@ -372,9 +372,28 @@
       grid-row: 6 ;
       text-align: center;
     }
-  
-  
+    .faqwrapper{
+      display: grid;
+      grid-template-columns: 1fr minmax(280px,3fr) 1fr;
+      grid-template-rows: 70px 100px 1fr ;
+      height: 100vh;
+      color: white;
+      background-color: rgb(6, 77, 94);
   }
+    .faqwrapper .imagefaq{
+      display: none;
+    }
+    .faqwrapper .faqcontent{
+      grid-column: 2;
+      grid-row: 3 / span 3;
+  }
+    .faqwrapper .faqbaslik{
+      grid-column: 2;
+      grid-row: 2 ;
+      font-size: 200%;
+      line-height: 380%;
+    }
+    }
 
   @media screen and (max-width: 600px) {
 
@@ -423,5 +442,28 @@
       grid-row: 9 ;
       text-align: center;
     }
+
+    .faqwrapper{
+      display: grid;
+      grid-template-columns: 1fr minmax(280px,3fr) 1fr;
+      grid-template-rows: 70px 100px 1fr ;
+      height: 100vh;
+      color: white;
+      background-color: rgb(6, 77, 94);
+  }
+    .faqwrapper .imagefaq{
+      display: none;
+    }
+    .faqwrapper .faqcontent{
+      grid-column: 2;
+      grid-row: 3 / span 3;
+  }
+    .faqwrapper .faqbaslik{
+      grid-column: 2;
+      grid-row: 2 ;
+      font-size: 200%;
+      line-height: 380%;
+    }
+  
     
   }
