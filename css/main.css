@@ -497,6 +497,7 @@
     .contactForm{
       grid-column: 1;
       grid-row: 2;
+      padding: 0 10%;
     }
     .contactFormInput{
       max-width:420px; 
