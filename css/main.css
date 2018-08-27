@@ -67,8 +67,8 @@
 
   /*Adding background for the slides
   * --------------------------------------- */
-  #section1,#section2,#section4,#section5
-  #section1 .fp-slide,#section2 .fp-slide,#section4 .fp-slide,#section5 .fp-slide
+  #section1,#section2,#section4,#section5,
+  #section1 .fp-slide,#section2 .fp-slide,#section4 .fp-slide,#section5 .fp-slide,
   #section1 .fp-tableCell,#section2 .fp-tableCell,#section4 .fp-tableCell,#section5 .fp-tableCell{
       height: auto !important;
   }
@@ -159,9 +159,10 @@
   .contactWrapper{
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 1fr;
-    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-rows: 10vh 10vh 80vh;
     height: 100vh;
     color: white;
+
   }
   .contactTanitim{
     grid-column: 2;
@@ -465,5 +466,39 @@
       line-height: 380%;
     }
   
-    
+    .contactWrapper{
+      display: grid;
+      grid-template-columns: 10fr;
+      grid-template-rows: 1fr 3fr 3fr 1fr;
+      color: white;
+    }
+    .contactTanitim{
+      grid-column: 1;
+      grid-row: 3;
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(50px,auto) 3fr minmax(100px,auto);
+      background-color: #000040 !important;
+    }
+    .tanitimBaslik{
+      grid-row: 1;
+      background: url(../img/logo-white-text.png) center top no-repeat;
+      background-size: 100px; 
+    }
+    .tanitimIcerik{
+      grid-row: 2;
+      padding: 0 10px 10px 10px;
+      line-height: 170%;
+    }
+    .tanitimSosyalMedya{
+      grid-row: 3;
+    }
+    .contactForm{
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .contactFormInput{
+      max-width:420px; 
+    }
   }
