@@ -32,29 +32,21 @@
 </head>
 
 <body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
-<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="img/logo-white-text.png" height="35px"></a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-            <li id="menuhover"><a href="#pageHome" style="color: #fff;">ANA SAYFA</a></li>
-            <li id="menuhover"><a href="#pageFeatures" style="color: #fff;">ÖZELLİKLER</a></li>
-            <li id="menuhover"><a href="#pageDifference" style="color: #fff;">FARKIMIZ</a></li>
-            <li id="menuhover"><a href="#pagePricing" style="color: #fff;">FİYATLANDIRMA</a></li>
-            <li id="menuhover"><a href="#pageFAQ" style="color: #fff;">SSS</a></li>
-            <li id="menuhover"><a href="#pageContact" style="color: #fff;">İLETİŞİM</a></li>
-        </ul>
-      </div>
+
+
+<nav class="tabs">
+    <img class="logo" src="img/logo-white-text.png" height="35px">
+    
+    <div class="menuler">
+        <div class="selector"></div>
+        <a href="#pageHome">ANA SAYFA</a>
+        <a href="#pageFeatures">ÖZELLİKLER</a>
+        <a href="#pageDifference">FARKIMIZ</a>
+        <a href="#pagePricing">FİYATLANDIRMA</a>
+        <a href="#pageFAQ">SSS</a>
+        <a href="#pageContact">İLETİŞİM</a>
     </div>
-  </nav>
+    </nav>
     <div id="fullpage">
     <div class="section" id="section0">     
         <div class="homegrid">  
@@ -420,6 +412,27 @@
             //alert("callback working");
             $('#btnSubmit').prop("disabled", false);        
         }
+
+        var tabs = $('.tabs');
+        var items = $('.tabs').find('a').length;
+        var selector = $(".tabs").find(".selector");
+        var activeItem = tabs.find('.active');
+        var activeWidth = activeItem.innerWidth();
+        $(".selector").css({
+        "left": activeItem.position.left + "px", 
+        "width": activeWidth + "px"
+        });
+
+        $(".tabs").on("click","a",function(){
+        $('.tabs a').removeClass("active");
+        $(this).addClass('active');
+        var activeWidth = $(this).innerWidth();
+        var itemPos = $(this).position();
+        $(".selector").css({
+            "left":itemPos.left + "px", 
+            "width": activeWidth + "px"
+        });
+        });
     </script>
 </body>
 </html>
