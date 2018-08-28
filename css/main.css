@@ -67,12 +67,20 @@
 
   /*Adding background for the slides
   * --------------------------------------- */
-  #section1,#section2,#section4,#section5,
-  #section1 .fp-slide,#section2 .fp-slide,#section4 .fp-slide,#section5 .fp-slide,
-  #section1 .fp-tableCell,#section2 .fp-tableCell,#section4 .fp-tableCell,#section5 .fp-tableCell{
-      height: auto !important;
+  .homegrid{
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: 5vh 90vh 5vh;
   }
-
+  .homeleft{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .homeright{
+    grid-column: 3;
+    grid-row: 2;
+    align-self: end;
+  }
   .slidewrapper{
       display: grid;
       grid-template-columns: 1fr 5fr 1fr 6fr 1fr 5fr 1fr;
@@ -321,12 +329,37 @@
 
   @media screen and (max-width: 992px) {
 
+    #section1,#section2,#section4,#section5,
+    #section1 .fp-slide,#section2 .fp-slide,#section4 .fp-slide,#section5 .fp-slide,
+    #section1 .fp-tableCell,#section2 .fp-tableCell,#section4 .fp-tableCell,#section5 .fp-tableCell{
+        height: auto !important;
+    }
+  
     .navbar-custom{
       border: 0 !important;
       border-bottom: 1px solid #6b9fc5 !important; 
       background: #009ABB !important;
       height: 70px !important;
     }
+
+    .homegrid{
+      display: grid;
+      grid-template-columns: 1fr 5fr 1fr;
+      grid-template-rows: 1fr 10fr 10fr 1fr;
+    }
+    .homeleft{
+      grid-row: 2;
+      grid-column: 2;
+      align-self: center;
+      justify-self: center
+    }
+    .homeright{
+      grid-row: 3;
+      grid-column: 2;
+      align-self: center;
+      justify-self: center
+    }
+  
     .slidewrapper{
       display: grid;
       grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
@@ -398,6 +431,13 @@
 
   @media screen and (max-width: 600px) {
 
+    #section1,#section2,#section4,#section5,
+    #section1 .fp-slide,#section2 .fp-slide,#section4 .fp-slide,#section5 .fp-slide,
+    #section1 .fp-tableCell,#section2 .fp-tableCell,#section4 .fp-tableCell,#section5 .fp-tableCell{
+        height: auto !important;
+    }
+    
+  
     .slidewrapper{
       display: grid;
       grid-template-columns: 1fr 10fr 1fr;
