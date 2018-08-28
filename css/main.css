@@ -47,7 +47,7 @@
     display:grid;
     grid-template-columns: 2fr 10fr 1fr;
     grid-template-rows: 1fr;
-    border-radius:50px;
+    border-radius:0 0 30px 30px;
     position:fixed;
     z-index: 9999;
     border: 0 !important;
