@@ -419,7 +419,7 @@
       grid-column: 3;
       justify-self: center;
       align-self: center;
-      display: block;
+      display: inline;
     }
     #toggle-menu .box {
       position: fixed;
@@ -488,11 +488,16 @@
     
     #toggle-nav { display: none; }
     
+
     #toggle-nav:checked ~ .box { 
       opacity: 1;
       z-index: 400;
     }
-    #toggle-nav:checked ~ .box ul {
+    #toggle-nav ~ .box , .box ul {
+      display: none;
+    }
+    #toggle-nav:checked ~ .box , .box ul {
+      display: inline;
       -webkit-transform: scale(1);
       -moz-transform: scale(1);
       -ms-transform: scale(1);
