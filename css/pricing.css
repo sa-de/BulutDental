@@ -109,7 +109,10 @@
     padding: 1em 2em;
     color: #fff;
     border-radius: 30px;
-    background: rgb(6, 77, 94);
+    background: #00dbde;
+    background: -moz-linear-gradient(45deg, #00dbde 0%, #a64bf4 100%);
+    background: -webkit-linear-gradient(45deg, #00dbde 0%,#a64bf4 100%);
+    background: linear-gradient(45deg, #00dbde 0%,#a64bf4 100%);
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
   }
