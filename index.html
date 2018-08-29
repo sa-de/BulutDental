@@ -35,7 +35,7 @@
 
 
 <nav class="tabs">
-    <img class="logo" src="img/logo-white-text.png" height="35px">
+    <a href="#pageHome"><img class="logo" src="img/logo-white-text.png" height="35px"></a> 
     <div class="menuler">
         <div class="selector"></div>
         <a href="#pageHome">ANA SAYFA</a>
@@ -427,18 +427,18 @@
             $('#btnSubmit').prop("disabled", false);        
         }
 
-        var tabs = $('.tabs');
-        var items = $('.tabs').find('a').length;
-        var selector = $(".tabs").find(".selector");
-        var activeItem = tabs.find('.active');
+        var menuler = $('.menuler');
+        var items = $('.menuler').find('a').length;
+        var selector = $(".menuler").find(".selector");
+        var activeItem = menuler.find('.active');
         var activeWidth = activeItem.innerWidth();
         $(".selector").css({
         "left": activeItem.position.left + "px", 
         "width": activeWidth + "px"
         });
 
-        $(".tabs").on("click","a",function(){
-        $('.tabs a').removeClass("active");
+        $(".menuler").on("click","a",function(){
+        $('.menuler a').removeClass("active");
         $(this).addClass('active');
         var activeWidth = $(this).innerWidth();
         var itemPos = $(this).position();
