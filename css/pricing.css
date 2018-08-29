@@ -81,7 +81,7 @@
     line-height: 0.75;
   }
   .pricing-palden .pricing-currency {
-    font-size: 0.15em;
+    font-size: 0.3em;
     vertical-align: top;
   }
   .pricing-palden .pricing-period {
@@ -101,7 +101,7 @@
     text-align: center;
   }
   .pricing-palden .pricing-feature {
-    padding: 1em 0;
+    padding: .2em 0;
   }
   .pricing-palden .pricing-action {
     padding: 1em ;
