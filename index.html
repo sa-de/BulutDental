@@ -38,12 +38,12 @@
     <a href="#pageHome"><img class="logo" src="img/logo-white-text.png" height="35px"></a> 
     <div class="menuler">
         <div class="selector"></div>
-        <a href="#pageHome">ANA SAYFA</a>
-        <a href="#pageFeatures">ÖZELLİKLER</a>
-        <a href="#pageDifference">FARKIMIZ</a>
-        <a href="#pagePricing">FİYATLANDIRMA</a>
-        <a href="#pageFAQ">SSS</a>
-        <a href="#pageContact">İLETİŞİM</a>
+        <a href="#pageHome" id="pageHomeId">ANA SAYFA</a>
+        <a href="#pageFeatures" id="pageFeaturesId">ÖZELLİKLER</a>
+        <a href="#pageDifference" id="pageDifferenceId">FARKIMIZ</a>
+        <a href="#pagePricing" id="pagePricingId">FİYATLANDIRMA</a>
+        <a href="#pageFAQ" id="pageFAQId">SSS</a>
+        <a href="#pageContact" id="pageContactId">İLETİŞİM</a>
     </div>
 
     <div id="toggle-menu">
@@ -61,7 +61,7 @@
     		</div>
     </div>
 </nav>
-    <div id="fullpage">
+<div id="fullpage">
     <div class="section" id="section0">     
         <div class="homegrid">  
         <div class="homeleft">
@@ -393,19 +393,114 @@
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/examples/examples.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
     <script type="text/javascript">
+
+        var menuler = $('.menuler');
+        var items = $('.menuler').find('a').length;
+        var selector = $(".menuler").find(".selector");
+        var activeItem = menuler.find('.active');
+        var activeWidth = activeItem.innerWidth();
+        $(".selector").css({
+        "left": activeItem.position.left + "px", 
+        "width": activeWidth + "px"
+        });
+        
+        $(".menuler").on("click","a",function(){
+        $('.menuler a').removeClass("active");
+        $(this).addClass('active');
+        var activeWidth = $(this).innerWidth();
+        var itemPos = $(this).position();
+        $(".selector").css({
+            "left":itemPos.left + "px", 
+            "width": activeWidth + "px"
+        });
+        });
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 anchors: ['pageHome', 'pageFeatures','pageDifference','pagePricing', 'pageFAQ', 'pageContact'],
                 navigation: true,
                 navigationPosition: 'right',
                 navigationTooltips: ['Ana Sayfa', 'Özellikler','Farkımız','Fiyatlandırma', 'SSS', 'İletişim'],
-                scrollOverflow: true,
                 responsiveWidth: 992,
                 responsiveHeight: 654,
-                afterResponsive: function(isResponsive){
+                onLeave: function(index, nextIndex, direction) {
+                    if (nextIndex==1 ){
+                        console.log("Home Sayfasına gidiyor");
+                        $('.menuler a').removeClass("active");
+                        $('#pageHomeId').addClass('active'); 
+
+                    }
+                    if (nextIndex==2 ){
+                        console.log("Özellikler Sayfasına gidiyor");
+                        $('.menuler a').removeClass("active");
+                        $('#pageFeaturesId').addClass('active');
+
+                    }
+                    if (nextIndex==3 ){
+                        console.log("Farkımız Sayfasına gidiyor");
+                        $('.menuler a').removeClass("active");
+                        $('#pageDifferenceId').addClass('active');
+
+                    }
+                    if (nextIndex==4 ){
+                        console.log("Fiyatlandırma Sayfasına gidiyor");
+                        $('.menuler a').removeClass("active");
+                        $('#pagePricingId').addClass('active');
+
+                    }
+                    if (nextIndex==5 ){
+                        console.log("SSS Sayfasına gidiyor");
+                        $('.menuler a').removeClass("active");
+                        $('#pageFAQId').addClass('active');
+
+                    }
+                    if (nextIndex==6 ){
+                        console.log("İletişim Sayfasına gidiyor");
+                        $('.menuler a').removeClass("active");
+                        $('#pageContactId').addClass('active');
+
+                    }
+
+                },
+                afterLoad: function(anchorLink, index) {
+
+                    if (anchorLink=='pageHome' ){
+
+                        $('.menuler a').removeClass("active");
+                        $('#pageHomeId').addClass('active');
+
+                    }
+                    if (anchorLink=='pageFeatures' ){
+
+                        $('.menuler a').removeClass("active");
+                        $('#pageFeaturesId').addClass('active');
+
+                    }
+                    if (anchorLink=='pageDifference' ){
+
+                        $('.menuler a').removeClass("active");
+                        $('#pageDifferenceId').addClass('active');
+
+                    }
+                    if (anchorLink=='pagePricing' ){
+
+                        $('.menuler a').removeClass("active");
+                        $('#pagePricingId').addClass('active');
+
+                    }
+                    if (anchorLink=='pageFAQ' ){
+
+                        $('.menuler a').removeClass("active");
+                        $('#pageFAQId').addClass('active');
+
+                    }
+                    if (anchorLink=='pageContact' ){
+
+                        $('.menuler a').removeClass("active");
+                        $('#pageContactId').addClass('active');
+
+                    }
                 }
             });
-
             $('#btnSubmit').prop("disabled", true);
         });
 
@@ -454,27 +549,7 @@
             //alert("callback working");
             $('#btnSubmit').prop("disabled", false);        
         }
-
-        var menuler = $('.menuler');
-        var items = $('.menuler').find('a').length;
-        var selector = $(".menuler").find(".selector");
-        var activeItem = menuler.find('.active');
-        var activeWidth = activeItem.innerWidth();
-        $(".selector").css({
-        "left": activeItem.position.left + "px", 
-        "width": activeWidth + "px"
-        });
-
-        $(".menuler").on("click","a",function(){
-        $('.menuler a').removeClass("active");
-        $(this).addClass('active');
-        var activeWidth = $(this).innerWidth();
-        var itemPos = $(this).position();
-        $(".selector").css({
-            "left":itemPos.left + "px", 
-            "width": activeWidth + "px"
-        });
-        });
+        
     </script>
 </body>
 </html>
