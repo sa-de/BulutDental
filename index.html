@@ -38,7 +38,7 @@
     <a href="#pageHome"><img class="logo" src="img/logo-white-text.png" height="35px"></a> 
     <div class="menuler">
         <div class="selector"></div>
-        <a href="#pageHome" id="pageHomeId">ANA SAYFA</a>
+        <a href="#pageHome" id="pageHomeId" class="active">ANA SAYFA</a>
         <a href="#pageFeatures" id="pageFeaturesId">ÖZELLİKLER</a>
         <a href="#pageDifference" id="pageDifferenceId">FARKIMIZ</a>
         <a href="#pagePricing" id="pagePricingId">FİYATLANDIRMA</a>
@@ -393,112 +393,73 @@
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/examples/examples.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
     <script type="text/javascript">
-
-        var menuler = $('.menuler');
-        var items = $('.menuler').find('a').length;
-        var selector = $(".menuler").find(".selector");
-        var activeItem = menuler.find('.active');
-        var activeWidth = activeItem.innerWidth();
-        $(".selector").css({
-        "left": activeItem.position.left + "px", 
-        "width": activeWidth + "px"
-        });
         
+        // Usage: menu_active_animate("pageDifference");
+        function menu_active_animate(anchorLink) {
+            // var anchorLink = anchors[nextIndex - 1];
+            var submenu = $("#" + anchorLink + "Id");
+
+            console.log("anchorLink: ", anchorLink);
+            console.log("submenu: ", submenu);
+
+            $('.menuler a').removeClass("active");
+            submenu.addClass('active');
+
+            var activeWidth = submenu.innerWidth();
+            var itemPos = submenu.position();
+
+            console.log("itemPos: ", itemPos);
+
+            if(itemPos) {
+                $(".selector").css({
+                    "left":itemPos.left + "px", 
+                    "width": activeWidth + "px"
+                });
+            }
+        }
+
+        // Menu: ust menuye tiklaninca animasyon efekt ver      
         $(".menuler").on("click","a",function(){
-        $('.menuler a').removeClass("active");
-        $(this).addClass('active');
-        var activeWidth = $(this).innerWidth();
-        var itemPos = $(this).position();
-        $(".selector").css({
-            "left":itemPos.left + "px", 
-            "width": activeWidth + "px"
+            $('.menuler a').removeClass("active");
+            $(this).addClass('active');
+
+            // console.log("This: ", this);
+
+            var activeWidth = $(this).innerWidth();
+            var itemPos = $(this).position();
+
+            $(".selector").css({
+                "left":itemPos.left + "px", 
+                "width": activeWidth + "px"
+            });
         });
-        });
+
         $(document).ready(function() {
+            var anchors = ['pageHome', 'pageFeatures','pageDifference','pagePricing', 'pageFAQ', 'pageContact'];
+            var navigationTooltips = ['Ana Sayfa', 'Özellikler','Farkımız','Fiyatlandırma', 'SSS', 'İletişim'];
+
+            // Sayfa yuklendiginde url paterninde #pageFooId olmadiginda menu animasyon efekt ver
+            // pageHomeId -> pageHome
+            var anchorLink = $('.menuler a.active').attr('id').split("Id")[0];
+            menu_active_animate(anchorLink);
+
             $('#fullpage').fullpage({
-                anchors: ['pageHome', 'pageFeatures','pageDifference','pagePricing', 'pageFAQ', 'pageContact'],
+                anchors: anchors,
                 navigation: true,
                 navigationPosition: 'right',
-                navigationTooltips: ['Ana Sayfa', 'Özellikler','Farkımız','Fiyatlandırma', 'SSS', 'İletişim'],
+                navigationTooltips: navigationTooltips,
                 responsiveWidth: 992,
                 responsiveHeight: 654,
+                
                 onLeave: function(index, nextIndex, direction) {
-                    if (nextIndex==1 ){
-                        console.log("Home Sayfasına gidiyor");
-                        $('.menuler a').removeClass("active");
-                        $('#pageHomeId').addClass('active'); 
-
-                    }
-                    if (nextIndex==2 ){
-                        console.log("Özellikler Sayfasına gidiyor");
-                        $('.menuler a').removeClass("active");
-                        $('#pageFeaturesId').addClass('active');
-
-                    }
-                    if (nextIndex==3 ){
-                        console.log("Farkımız Sayfasına gidiyor");
-                        $('.menuler a').removeClass("active");
-                        $('#pageDifferenceId').addClass('active');
-
-                    }
-                    if (nextIndex==4 ){
-                        console.log("Fiyatlandırma Sayfasına gidiyor");
-                        $('.menuler a').removeClass("active");
-                        $('#pagePricingId').addClass('active');
-
-                    }
-                    if (nextIndex==5 ){
-                        console.log("SSS Sayfasına gidiyor");
-                        $('.menuler a').removeClass("active");
-                        $('#pageFAQId').addClass('active');
-
-                    }
-                    if (nextIndex==6 ){
-                        console.log("İletişim Sayfasına gidiyor");
-                        $('.menuler a').removeClass("active");
-                        $('#pageContactId').addClass('active');
-
-                    }
-
+                    // Slide gecislerinde menu animasyon efekt ver
+                    var anchorLink = anchors[nextIndex - 1];
+                    menu_active_animate(anchorLink);
                 },
+
                 afterLoad: function(anchorLink, index) {
-
-                    if (anchorLink=='pageHome' ){
-
-                        $('.menuler a').removeClass("active");
-                        $('#pageHomeId').addClass('active');
-
-                    }
-                    if (anchorLink=='pageFeatures' ){
-
-                        $('.menuler a').removeClass("active");
-                        $('#pageFeaturesId').addClass('active');
-
-                    }
-                    if (anchorLink=='pageDifference' ){
-
-                        $('.menuler a').removeClass("active");
-                        $('#pageDifferenceId').addClass('active');
-
-                    }
-                    if (anchorLink=='pagePricing' ){
-
-                        $('.menuler a').removeClass("active");
-                        $('#pagePricingId').addClass('active');
-
-                    }
-                    if (anchorLink=='pageFAQ' ){
-
-                        $('.menuler a').removeClass("active");
-                        $('#pageFAQId').addClass('active');
-
-                    }
-                    if (anchorLink=='pageContact' ){
-
-                        $('.menuler a').removeClass("active");
-                        $('#pageContactId').addClass('active');
-
-                    }
+                    // NOTE: Burada verilecek animasyon sayfa yuklendikten sonra devreye girdiginden kotu bir etki birakir.
+                    // menu_active_animate(anchorLink);
                 }
             });
             $('#btnSubmit').prop("disabled", true);
