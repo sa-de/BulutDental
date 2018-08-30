@@ -28,7 +28,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon-new.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
@@ -61,6 +66,7 @@
     		</div>
     </div>
 </nav>
+
 <div id="fullpage">
     <div class="section" id="section0">     
         <div class="homegrid">  
@@ -129,7 +135,6 @@
                     <div class="text-right p-t-8 p-b-31 g-recaptcha"
                         data-sitekey="6Lcn7z4UAAAAAFAOf3qcWDt5BraTQIQNDnV5Al4o"
                         data-callback="enableBtn"></div>
-
                     <br>
 
                     <div class="container-login100-form-btn">
@@ -146,6 +151,7 @@
         </div>
         </div> 
     </div>
+
     <div class="section" id="section1">
         <div class="slide">
             <div class="slidewrapper">
@@ -177,6 +183,7 @@
             </div>
         </div>
     </div>
+
     <div class="section" id="section2">
         <div class="slide" id="slide1">
             <div class="slidewrapper">
@@ -209,6 +216,7 @@
             </div>
         </div>
     </div>
+
     <div class="section" id="section3">
             <div class="intro">
             <div class="pricingWrapper">
@@ -247,6 +255,7 @@
                     </div>
                     </div>
             </div>
+
             <div class="switch switch-blue">
                 <input type="radio" class="switch-input" name="view2" value="week2" id="week2" checked>
                     <label for="week2" class="switch-label switch-label-off">Aylık</label>
@@ -271,6 +280,7 @@
                     </div>
                     <h3 class='pricing-title'>PREMIUM</h3>
                 </div>
+
                 <ul class='pricing-feature-list'>
                     <li class='pricing-feature'>Tüm BASIC Özellikler</li>
                     <li class='pricing-feature'>CRM</li>
@@ -279,6 +289,7 @@
                     <li class='pricing-feature'>Sınırsız Kullanıcı</li>
                     <li class='pricing-feature'>Sınırsız Doktor</li>
                 </ul>
+
                 <div class="pricing-action">
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
@@ -347,6 +358,7 @@
             </div>
         </div>
     </div>
+
     <div class="section" id="section5">
         <div class="intro">
             <div class="contactWrapper">
@@ -363,6 +375,7 @@
                                   </ul>
                     </div>
                 </div>
+
                 <div class="contactForm">
                     <span style="font-weight: bold;font-size: 130%;">İLETİŞİM FORMU</span> 
                     <form class="contactFormInput" action="https://getsimpleform.com/messages?form_api_token=a89dc01710f2294ec2e4e70b40e6dcd8" method="post">    
@@ -391,11 +404,11 @@
      </div>
     </div>
 </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/faq.js"></script>
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/jquery.fullPage.min.js"></script>
-    <script type="text/javascript" src="https://alvarotrigo.com/fullPage/examples/examples.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
     <script type="text/javascript">
         
@@ -407,6 +420,7 @@
             $(".pricing2 .pricing-price .pricing-period").html('/ Aylık');
 
         });
+        
         $(".switch").on("click",".switch-label-on",function(){
             $(".pricing1 .pricing-price .pricingpricing").html(650);
             $(".pricing1 .pricing-price .pricing-period").html('/ Yıllık');

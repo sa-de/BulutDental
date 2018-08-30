@@ -34,7 +34,7 @@
   }
   .toggle .toggle-title i {
     position: absolute;
-    background: url("http://arielbeninca.com/Storage/plus_minus.png") 0px -24px no-repeat;
+    background: url("/img/plus-minus-icon_white.png") 0px -24px no-repeat;
     width: 24px;
     height: 24px;
     transition: all 0.3s ease;
@@ -42,5 +42,6 @@
     right: 0;
   }
   .toggle .toggle-title.active i {
-    background: url("http://arielbeninca.com/Storage/plus_minus.png") 0px 0px no-repeat;
+    background: url("/img/plus-minus-icon_white.png") 0px 0px no-repeat;
+    color: red;
   }
