@@ -434,15 +434,16 @@
             });
         });
 
-        $(document).ready(function() {
-            var isload = true;
-            var anchors = ['pageHome', 'pageFeatures','pageDifference','pagePricing', 'pageFAQ', 'pageContact'];
-            var navigationTooltips = ['Ana Sayfa', 'Özellikler','Farkımız','Fiyatlandırma', 'SSS', 'İletişim'];
-
+        jQuery(window).load(function () {            
             // Sayfa yuklendiginde url paterninde #pageFooId olmadiginda menu animasyon efekt ver
             // pageHomeId -> pageHome
             var anchorLink = $('.menuler a.active').attr('id').split("Id")[0];
             menu_active_animate(anchorLink);
+        });
+
+        $(document).ready(function() {
+            var anchors = ['pageHome', 'pageFeatures','pageDifference','pagePricing', 'pageFAQ', 'pageContact'];
+            var navigationTooltips = ['Ana Sayfa', 'Özellikler','Farkımız','Fiyatlandırma', 'SSS', 'İletişim'];
 
             $('#fullpage').fullpage({
                 anchors: anchors,
@@ -460,11 +461,7 @@
 
                 afterLoad: function(anchorLink, index) {
                     // NOTE: Burada verilecek animasyon sayfa yuklendikten sonra devreye girdiginden kotu bir etki birakir.
-                    // Ancak bazen js vs gec gelince kotu etki olusuyor. O yuzden ilk yuklemede onlem olarak calistir.
-                    if(isload) {
-                        menu_active_animate(anchorLink);
-                        isload = false;
-                    }
+                    // menu_active_animate(anchorLink);
                 }
             });
             $('#btnSubmit').prop("disabled", true);
