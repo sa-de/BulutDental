@@ -694,6 +694,13 @@
     #section1 .fp-tableCell,#section2 .fp-tableCell,#section4 .fp-tableCell,#section5 .fp-tableCell{
         height: auto !important;
     }
+    #section0 {
+      background: #00dbde;
+      background: -moz-linear-gradient(45deg, #00dbde 30%, #a64bf4 70%);
+      background: -webkit-linear-gradient(45deg, #00dbde 30%,#a64bf4 70%);
+      background: linear-gradient(45deg, #00dbde 30%,#a64bf4 70%);
+      }
+
     .wrap-login100{
       width: 100vw;
     }
