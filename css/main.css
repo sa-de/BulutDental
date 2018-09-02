@@ -119,7 +119,7 @@
     background-color: #2890b7;
 }
   #section2 {
-    background-color: #195a72;
+    background-color: #1d212b;  
   }
   #section3{
     background: #178ab4;
@@ -181,13 +181,65 @@
   .slidewrapper .dis{
     grid-column: 4;
     grid-row: 4 / span 3 ;
-    font-size: 50px;
+  }
+  .slidewrapper #dis1{
     background: url(../img/dis5.png) center no-repeat;
     background-size: 70%; 
   }
-  #dis2{
-    background: url(../img/dis4.png) center no-repeat;
+
+  #dis2 {
+    background: url(../img/dis4.png) bottom no-repeat;
     background-size: 70%; 
+    position: relative;
+    width: 90%;
+    height: 70%;
+    line-height: 30vw;
+    text-align: center;
+    justify-self: center;
+    align-self: start;
+    color: #252B37;
+    animation: textColor 10s ease infinite;
+  }
+  #dis2:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.75);
+    -webkit-filter: blur(5vw);
+    -moz-filter: blur(5vw);
+    -ms-filter: blur(5vw);
+    filter: blur(5vw);
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+  }
+  @keyframes animateGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes textColor {
+    0% {
+      color: #7e0fff;
+    }
+    50% {
+      color: #0fffc1;
+    }
+    100% {
+      color: #7e0fff;
+    }
   }
   .slidewrapper .yazi4{
     grid-column: 5 / span 2;
@@ -821,3 +873,6 @@
     }
 
   }
+
+
+  
