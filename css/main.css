@@ -306,9 +306,45 @@
   }
   .tanitimIcerik{
     grid-row: 2;
-    padding: 0 10% 10% 10%;
+    padding: 10% 0;
     line-height: 170%;
   }
+  
+  /*** Table Styles **/
+
+  .table-fill {
+    border-radius:3px;
+    border-collapse: collapse;
+    height: auto;
+    margin: 0 auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+
+  }
+    
+  tr {
+    color:#666B85;
+    font-size:16px;
+    font-weight:normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+  }
+      
+  td {
+    background: transparent;
+    padding:15px;
+    text-align:left;
+    vertical-align:middle;
+    font-weight:300;
+    font-size:18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+  }
+
+  td:last-child {
+    border-right: 0px;
+  }
+
   .tanitimSosyalMedya{
     grid-row: 3;
   }
