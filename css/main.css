@@ -309,7 +309,6 @@
     padding: 10% 0;
     line-height: 170%;
   }
-  
   /*** Table Styles **/
 
   .table-fill {
@@ -324,7 +323,7 @@
   }
     
   tr {
-    color:#666B85;
+    color:white;
     font-size:16px;
     font-weight:normal;
     text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
