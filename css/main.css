@@ -186,7 +186,7 @@
     background: url(../img/dis5.png) bottom no-repeat;
     background-size: 70%; 
     position: relative;
-    width: 80%;
+    width: 60%;
     height: 70%;
     justify-self: center;
     align-self: start;
@@ -196,7 +196,7 @@
     background: url(../img/dis4.png) bottom no-repeat;
     background-size: 70%; 
     position: relative;
-    width: 80%;
+    width: 60%;
     height: 70%;
     line-height: 30vw;
     text-align: center;
@@ -917,3 +917,20 @@
 
 
   
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto !important;
+}
