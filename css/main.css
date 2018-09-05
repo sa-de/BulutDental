@@ -483,12 +483,13 @@
     font-size: 30px;
     line-height:1.2; color: #f9f9f9;
   }
-  .banner-text li {
-      font-family: Poppins-Regular;
-      font-size: 20px;
-      color: #003300;
-      padding: 5px 0 5px 10px;
-      line-height: 25px;
+  banner-text li {
+    font-weight: bold;
+    font-family: Poppins-Regular;
+    font-size: 20px;
+    color: #062351;
+    padding: 5px 0 5px 10px;
+    line-height: 25px;
   }
 
   .banner-text li .fa {
