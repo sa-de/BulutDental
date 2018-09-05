@@ -183,8 +183,13 @@
     grid-row: 4 / span 3 ;
   }
   .slidewrapper #dis1{
-    background: url(../img/dis5.png) center no-repeat;
+    background: url(../img/dis5.png) bottom no-repeat;
     background-size: 70%; 
+    position: relative;
+    width: 80%;
+    height: 70%;
+    justify-self: center;
+    align-self: start;
   }
 
   #dis2 {
