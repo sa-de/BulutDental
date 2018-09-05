@@ -483,7 +483,7 @@
     font-size: 30px;
     line-height:1.2; color: #f9f9f9;
   }
-  banner-text li {
+  .banner-text li {
     font-weight: bold;
     font-family: Poppins-Regular;
     font-size: 20px;
