@@ -107,13 +107,25 @@
   .section{
       text-align: center;
   }
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 35%;
+  }
   #section0 {
-    background-image: url(../img/bgH3_85.jpg);
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover;
     text-align: left;
-    opacity: .8;
+    opacity: .9;
   }
   #section1 {
     background-color: #2890b7;
@@ -787,6 +799,9 @@
     #section1 .fp-tableCell,#section2 .fp-tableCell,#section4 .fp-tableCell,#section5 .fp-tableCell{
         height: auto !important;
     }
+    .fullscreen-bg{
+      display: none;
+    }
     #section0 {
       background: #00dbde;
       background: -moz-linear-gradient(45deg, #00dbde 30%, #a64bf4 70%);
@@ -914,23 +929,3 @@
     }
 
   }
-
-
-  
-  .fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-}
-
-.fullscreen-bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto !important;
-}
