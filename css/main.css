@@ -335,13 +335,15 @@
   }
       
   td {
-    padding:15px;
+    padding:10px;
     text-align:left;
-    vertical-align:middle;
     font-weight:300;
     font-size:18px;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-    border-right: 3px solid rgb(6, 77, 94);
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1);
+    border-right: 2px solid rgb(6, 77, 94);
+  }
+  td:first-child {
+    border-right: 0px;
   }
 
   td:last-child {
