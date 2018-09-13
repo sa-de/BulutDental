@@ -126,7 +126,7 @@
 
                     <div class="wrap-input100 validate-input" data-validate="Cep telefonu gereklidir">
                         <span class="label-input100">Cep Telefonu</span>
-                        <input class="input100" type="phone" name="phone" placeholder="Cep telefonu">
+                        <input class="input100" type="phone" name="phone" pattern="^05(0[5-7]|[3-5]\d)\d{3}\d{4}$" title="Lütfen geçerli bir telefon numarası giriniz" placeholder="05XXXXXXXXX">
                         <span class="focus-input100" data-symbol="📞"></span>
                     </div>
                     
@@ -561,8 +561,7 @@
               // islem basarılı ise
               success: function(data, status, xml){
                 var item = "Sayın " + data["data"].name;
-                item += "<br> Kaydınız başarılı bir şekilde yapılmıştır. <br>Sizin için oluşturulan <a href='" + data["data"].url;
-                item += "'>" + data["data"].url + "</a> adresi oluşturulmuştur.<br>5 saniye sonra sayfaya yönlendirileceksiniz.";
+                item += "<br> Kayıt talebiniz alınmıştır. En kısa zamanda telefon numaranıza SMS ile dönüş sağlanacaktır.";
                 $("#getCode").append(item);
                 $("#getCodeModal").modal('show');
                 console.log("SUCCESS");
