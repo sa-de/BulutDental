@@ -203,20 +203,17 @@
     justify-self: center;
     align-self: start;
   }
-
   #dis2 {
-    background: url(../img/dis4.png) center no-repeat;
-    background-size: 70%; 
     position: relative;
-    width: 60%;
-    height: 70%;
     line-height: 30vw;
-    text-align: center;
-    justify-self: center;
-    align-self: start;
     color: #252B37;
     animation: textColor 10s ease infinite;
   }
+  #dis2 img{
+    width: 40%;
+    animation-iteration-count: 1;
+  }
+
   #dis2:after {
     position: absolute;
     content: "";
@@ -224,8 +221,8 @@
     left: 0;
     right: 0;
     z-index: -1;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
     margin: 0 auto;
     transform: scale(0.75);
     -webkit-filter: blur(5vw);

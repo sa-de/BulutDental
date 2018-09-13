@@ -26,7 +26,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://sade.app/BulutDental/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://sade.app/BulutDental/favicon/favicon-32x32.png">
@@ -224,7 +225,7 @@
                     <span style="font-weight: bold;font-size: 1.3em;">Tedavi Planlama+</span><br>
                     Tek bir ekrandan proforma, fatura, laboratuvar istek oluşturma, randevular, ödeme detaylarını geliştirin.
                 </div>
-                <div id="dis2" class="dis"></div>
+                <div id="dis2" class="dis"><img src="img/dis4.png"></div>
             </div>
         </div>
     </div>
@@ -453,7 +454,7 @@
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
     <script type="text/javascript">
         
-        $(".switch").on("click",".switch-label-off",function(){
+            $(".switch").on("click",".switch-label-off",function(){
             $(".pricing1 .pricing-price .pricingpricing").html(65);
             $(".pricing1 .pricing-price .pricing-period").html('/ Aylık');
             
@@ -534,11 +535,17 @@
                     // Slide gecislerinde menu animasyon efekt ver
                     var anchorLink = anchors[nextIndex - 1];
                     menu_active_animate(anchorLink);
+                    if (nextIndex==3 ){
+                        $('#dis2 img').removeClass('animated pulse');
+                    } 
                 },
 
                 afterLoad: function(anchorLink, index) {
                     // NOTE: Burada verilecek animasyon sayfa yuklendikten sonra devreye girdiginden kotu bir etki birakir.
                     // menu_active_animate(anchorLink);
+                    if (anchorLink=='pageDifference' ){ 
+                        $('#dis2 img').addClass('animated pulse');
+                    }
                 }
             });
             $('#btnSubmit').prop("disabled", true);
