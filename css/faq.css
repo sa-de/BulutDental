@@ -32,16 +32,94 @@
     font-size: 22px;
     margin-right: 5px;
   }
-  .toggle .toggle-title i {
+  .toggle .toggle-title button{
     position: absolute;
-    background: url("https://sade.app/BulutDental/img/plus-minus-icon_white.png") 0px 6px no-repeat;
     width: 24px;
     height: 24px;
-    transition: all 0.3s ease;
     margin: 20px;
     right: 0;
+    z-index: 999999;
   }
-  .toggle .toggle-title.active i {
-    background: url("https://sade.app/BulutDental/img/plus-minus-icon_white.png") 0px -16px no-repeat;
-    color: red;
-  }
+  .tcon {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 40px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 40px;
+    background: transparent;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; }
+    .tcon > * {
+      display: block; }
+    .tcon:hover, .tcon:focus {
+      outline: none; }
+    .tcon::-moz-focus-inner {
+      border: 0; }
+  
+  .tcon-plus {
+    height: 40px;
+    position: relative;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+    width: 40px; }
+    .tcon-plus::before, .tcon-plus::after {
+      content: "";
+      border-radius: 2px;
+      display: block;
+      width: 85%;
+      height: 25%;
+      position: absolute;
+      top: 37%;
+      left: 8%;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      background: white; }
+    .tcon-plus:after {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
+  
+  .tcon-plus--minus.tcon-transform::before {
+    -webkit-transform: rotate(180deg) translate(0, 0);
+    transform: rotate(180deg) translate(0, 0);
+    width: 62%; }
+  
+  .tcon-plus--minus.tcon-transform::after {
+    -webkit-transform: rotate(-180deg) translate(-37.5%, 0);
+    transform: rotate(-180deg) translate(-37.5%, 0);
+    width: 62%; }
+  
+  .tcon-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+    .tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto; }
+  
