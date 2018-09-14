@@ -131,11 +131,19 @@
     background-color: #2c3e50;
 }
   #section2 {
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-size: 400% 400%;
-    -webkit-animation: Gradient 15s ease;
-    -moz-animation: Gradient 15s ease 1;
-    animation: Gradient 15s ease 1;
+  }
+
+  .static_background {
+    background-color: #23A6D5;
+  }
+
+  .gradient_animation {
+    background: linear-gradient(-45deg, #E73C7E, #23A6D5);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    -moz-animation: Gradient 3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 2;
+    animation: Gradient 3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 2;
   }
   
   @-webkit-keyframes Gradient {
@@ -249,7 +257,7 @@
   }
   #dis2 img{
     width: 40%;
-    animation-iteration-count: 1;
+    animation-iteration-count: 3;
   }
 
   .slidewrapper .yazi4{
@@ -267,6 +275,16 @@
     grid-row: 6 ;
     text-align: start;
   }
+
+  .plus_sign {
+    vertical-align: super;
+    color: #ecf0f1;
+    font-size: 1em;
+  }
+  .plus_sign::after {
+    content: "+";
+  }
+
   .slidewrapper img{
     width: 100vw;
   }
