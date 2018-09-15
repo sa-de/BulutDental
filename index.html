@@ -628,7 +628,9 @@
                 window.setTimeout(function() {
                     $("#getCodeModal").modal('hide');
 
-                    frm.reset();
+                    // https://stackoverflow.com/questions/3786694/how-to-reset-clear-form-through-javascript
+                    // frm.reset(); // Not working!!!
+                    document.getElementById("sign_up").reset();
 
                     // OLD: 10 saniye sonra yonlendirme
                     // window.location.href = data.data[0].url;
