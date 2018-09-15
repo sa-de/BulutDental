@@ -609,26 +609,39 @@
             dataType: 'json',
             // islem basarılı ise
             success: function(data, status, xml) {
-                var item = "Sayın " + data["data"].name;
+                var item;
+
+                item = "Sayın " + data["data"].name;
                 item += "<br> Kayıt talebiniz alınmıştır. En kısa zamanda telefon numaranıza SMS ile dönüş sağlanacaktır.";
+
                 $("#getCode").html(item);
+
                 $("#getCodeModal").modal('show');
+                
                 btn_default_state();
+                
                 console.log("SUCCESS");
                 console.log("data: ", data);
                 console.log("status: ", status);
                 console.log("xml: ", xml);
-                // 5 saniye sonra yonlendirme
+
                 window.setTimeout(function() {
-                    window.location.href = data.data[0].url;
+                    $("#getCodeModal").modal('hide');
+
+                    // OLD: 5 saniye sonra yonlendirme
+                    // window.location.href = data.data[0].url;
                 }, 5000);
             },
             // islem basarısız ise
             error: function(xml, status, error) {
                 var item = "Kayıt başarısız.";
+
                 $("#getCode").html(item);
+
                 $("#getCodeModal").modal('show');
+
                 btn_default_state();
+
                 console.log("ERROR");
                 console.log("xml: ", xml);
                 console.log("status: ", status);
@@ -637,6 +650,7 @@
             // son
             complete: function(xml, status) {}
         });
+        
         // tekrarı onle
         ev.preventDefault();
     });
