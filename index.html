@@ -147,7 +147,8 @@
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
                             <button class="login100-form-btn btn" disabled id="btnSubmit" style="font-family: Poppins-Regular;">
-                                <b class="login100form-icon"><font size="6" family>⧝</font></b>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>
+                                <img class="login100form-icon" src="img/logo.png" width="36">
+                                &nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>
                                 <!-- ∞ -->
                             </button>
                             </a>
@@ -460,21 +461,20 @@
             $('#btnSubmit').prop("disabled", true);
             $( "#btnSubmit" ).removeClass("login100-form-btn");
             $( "#btnSubmit" ).addClass("btn-loading");
-            $( "b" ).remove(".login100form-icon");
-            $( "#btnSubmit" ).append( "<span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
+            $( "img" ).remove(".login100form-icon");
+            $( "#btnSubmit" ).html("<b>Talebiniz İşleniyor</b><span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
         }
         function form_default(){
             enableBtn();
             $( "#btnSubmit" ).removeClass("btn-loading");
             $( "#btnSubmit" ).addClass("login100-form-btn");
-            $( "#btnSubmit" ).prepend( "<b class='login100form-icon'><font size='6' family>⧝</font></b>");
+            $( "#btnSubmit" ).html( "<img class='login100form-icon' src='img/logo.png' width='36'>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>");
             $( "span" ).remove( ".tcon-loader--spinner360,.tcon-visuallyhidden");
         }
         $("#btnSubmit").click(function() {
             form_loading();
         });
 
-        
             $(".switch").on("click",".switch-label-off",function(){
             $(".pricing1 .pricing-price .pricingpricing").html(65);
             $(".pricing1 .pricing-price .pricing-period").html('/ Aylık');

@@ -501,7 +501,7 @@ iframe {
   right: 5%;
   -webkit-animation: tcon-spin360 0.675s linear infinite forwards;
   animation: tcon-spin360 0.675s linear infinite forwards;
-  background: #30336b; }
+  background: #2c3e50; }
   .tcon-loader--spinner360:before, .tcon-loader--spinner360:after {
     content: "";
     display: block;
@@ -513,7 +513,7 @@ iframe {
     top: 0;
     right: 0;
     z-index: 1;
-    background: #fc00ff }
+    background: #ecf0f1 }
   .tcon-loader--spinner360:after {
     border-radius: 80%;
     height: 30px;
@@ -523,7 +523,7 @@ iframe {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
-    background: #fc00ff; }
+    background: #ecf0f1 }
 
 @-webkit-keyframes tcon-spin360 {
   to {
