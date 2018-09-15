@@ -591,7 +591,26 @@
     background: linear-gradient(45deg, #00dbde 10%,#a64bf4 90%);
   }
 
+  .modal {
+    text-align: center;
+    padding: 0!important;
+  }
   
+  .modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+  
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+
   /* Media Screen
   * --------------------------------------- */
 
