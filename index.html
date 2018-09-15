@@ -127,13 +127,13 @@
                                 </a>
                             </div>
                             <br>
-                            <div class="text-right p-t-8 p-b-31 g-recaptcha" data-sitekey="6Lcn7z4UAAAAAFAOf3qcWDt5BraTQIQNDnV5Al4o" data-callback="enableBtn"></div>
+                            <div class="text-right p-t-8 p-b-31 g-recaptcha" data-sitekey="6Lcn7z4UAAAAAFAOf3qcWDt5BraTQIQNDnV5Al4o" data-callback="btn_enable"></div>
                             <br>
                             <div class="container-login100-form-btn">
                                 <div class="wrap-login100-form-btn">
                                     <div class="login100-form-bgbtn"></div>
                                     <button class="login100-form-btn btn" disabled id="btnSubmit" style="font-family: Poppins-Regular;">
-                                        <img class="login100form-icon" src="img/logo.png" width="36"> &nbsp;&nbsp;
+                                        <img id="btnIcon" class="login100form-icon" src="img/logo.png" width="36"> &nbsp;&nbsp;
                                         <b>Ücretsiz kullanmaya başlayın</b>
                                         <!-- ∞ -->
                                     </button>
@@ -413,7 +413,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">KAYDINIZ OLUŞTURULMUŞTUR</h4>
+                    <h4 class="modal-title" id="myModalLabel">Otomasyon Kayıt Talebi</h4>
                 </div>
                 <div class="modal-body" id="getCode" style="overflow-x: scroll;">
                 </div>
@@ -428,24 +428,41 @@
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
 
     <script type="text/javascript">
-    function form_loading() {
-        $('#btnSubmit').prop("disabled", true);
+    // Submit butonunu loading state'e getir
+    function btn_loading_state() {
+        btn_disabled();
+
         $("#btnSubmit").removeClass("login100-form-btn");
         $("#btnSubmit").addClass("btn-loading");
-        $("img").remove(".login100form-icon");
+
         $("#btnSubmit").html("<b>Talebiniz İşleniyor</b><span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
+        $("img#btnIcon").remove(".login100form-icon");
     }
 
-    function form_default() {
-        enableBtn();
+    // Submit butonunu default state'e dondur
+    function btn_default_state() {
+        btn_enable();
+
         $("#btnSubmit").removeClass("btn-loading");
         $("#btnSubmit").addClass("login100-form-btn");
-        $("#btnSubmit").html("<img class='login100form-icon' src='img/logo.png' width='36'>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>");
+
+        $("#btnSubmit").html("<img id='btnIcon' class='login100form-icon' src='img/logo.png' width='36'>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>");
         $("span").remove(".tcon-loader--spinner360,.tcon-visuallyhidden");
     }
     
+    function btn_disabled() {
+        $('#btnSubmit').prop("disabled", true);
+    }
+
+    function btn_enable() {
+        // alert("callback working");
+        $('#btnSubmit').prop("disabled", false);
+    }
+
     $("#btnSubmit").click(function() {
-        form_loading();
+        btn_loading_state();
+
+        $("#sign_up").submit();
     });
 
     $(".switch").on("click", ".switch-label-off", function() {
@@ -584,6 +601,7 @@
 
     var frm = $('#sign_up');
     frm.submit(function(ev) {
+        // alert("#sign_up submit tetiklendi");
         $.ajax({
             type: 'POST',
             url: 'https://api.bulut.dental/v1/public/firm',
@@ -593,9 +611,9 @@
             success: function(data, status, xml) {
                 var item = "Sayın " + data["data"].name;
                 item += "<br> Kayıt talebiniz alınmıştır. En kısa zamanda telefon numaranıza SMS ile dönüş sağlanacaktır.";
-                $("#getCode").append(item);
+                $("#getCode").html(item);
                 $("#getCodeModal").modal('show');
-                form_default();
+                btn_default_state();
                 console.log("SUCCESS");
                 console.log("data: ", data);
                 console.log("status: ", status);
@@ -608,9 +626,9 @@
             // islem basarısız ise
             error: function(xml, status, error) {
                 var item = "Kayıt başarısız.";
-                $("#getCode").append(item);
+                $("#getCode").html(item);
                 $("#getCodeModal").modal('show');
-                form_default();
+                btn_default_state();
                 console.log("ERROR");
                 console.log("xml: ", xml);
                 console.log("status: ", status);
@@ -622,11 +640,6 @@
         // tekrarı onle
         ev.preventDefault();
     });
-
-    function enableBtn() {
-        //alert("callback working");
-        $('#btnSubmit').prop("disabled", false);
-    }
 
     var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
