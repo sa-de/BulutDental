@@ -147,7 +147,7 @@
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
                             <button class="login100-form-btn btn" disabled id="btnSubmit" style="font-family: Poppins-Regular;">
-                                <b><font size="6" family>⧝</font></b> &nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>
+                                <b class="login100form-icon"><font size="6" family>⧝</font></b>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>
                                 <!-- ∞ -->
                             </button>
                             </a>
@@ -455,6 +455,23 @@
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/jquery.fullPage.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
     <script type="text/javascript">
+    
+        function form_loading(){
+            $( "#btnSubmit" ).removeClass("login100-form-btn");
+            $( "#btnSubmit" ).addClass("btn-loading");
+            $( "b" ).remove(".login100form-icon");
+            $( "#btnSubmit" ).append( "<span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
+        }
+        function form_default(){
+            $( "#btnSubmit" ).removeClass("btn-loading");
+            $( "#btnSubmit" ).addClass("login100-form-btn");
+            $( "#btnSubmit" ).prepend( "<b class='login100form-icon'><font size='6' family>⧝</font></b>");
+            $( "span" ).remove( ".tcon-loader--spinner360,.tcon-visuallyhidden");
+        }
+        $("#btnSubmit").click(function() {
+            form_loading();
+        });
+
         
             $(".switch").on("click",".switch-label-off",function(){
             $(".pricing1 .pricing-price .pricingpricing").html(65);
@@ -603,6 +620,7 @@
                 item += "<br> Kayıt talebiniz alınmıştır. En kısa zamanda telefon numaranıza SMS ile dönüş sağlanacaktır.";
                 $("#getCode").append(item);
                 $("#getCodeModal").modal('show');
+                form_default();
                 console.log("SUCCESS");
                 console.log("data: ", data);
                 console.log("status: ", status);
@@ -617,6 +635,7 @@
                 var item = "Kayıt başarısız.";
                 $("#getCode").append(item);
                 $("#getCodeModal").modal('show');
+                form_default();
                 console.log("ERROR");
                 console.log("xml: ", xml);
                 console.log("status: ", status);
