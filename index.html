@@ -628,9 +628,11 @@
                 window.setTimeout(function() {
                     $("#getCodeModal").modal('hide');
 
-                    // OLD: 5 saniye sonra yonlendirme
+                    frm.reset();
+
+                    // OLD: 10 saniye sonra yonlendirme
                     // window.location.href = data.data[0].url;
-                }, 5000);
+                }, 10000);
             },
             // islem basarısız ise
             error: function(xml, status, error) {
@@ -650,7 +652,7 @@
             // son
             complete: function(xml, status) {}
         });
-        
+
         // tekrarı onle
         ev.preventDefault();
     });
