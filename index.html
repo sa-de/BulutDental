@@ -457,12 +457,14 @@
     <script type="text/javascript">
     
         function form_loading(){
+            $('#btnSubmit').prop("disabled", true);
             $( "#btnSubmit" ).removeClass("login100-form-btn");
             $( "#btnSubmit" ).addClass("btn-loading");
             $( "b" ).remove(".login100form-icon");
             $( "#btnSubmit" ).append( "<span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
         }
         function form_default(){
+            enableBtn();
             $( "#btnSubmit" ).removeClass("btn-loading");
             $( "#btnSubmit" ).addClass("login100-form-btn");
             $( "#btnSubmit" ).prepend( "<b class='login100form-icon'><font size='6' family>⧝</font></b>");
