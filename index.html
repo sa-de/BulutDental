@@ -73,74 +73,22 @@
                 </div>
                 <div class="homeleft">
                     <div class="banner-text">
-                        <h1>Bulut <strong>Diş Kliniği</strong> <br>Otomasyonu</h1>
                         <p>
                             Her zaman, her yerde, her cihazla<br>
                             güvenli erişim sağlayın.
                         </p>
-                        <br>
-                        <ul>
-                            <li><i class="fa fa-user"></i> Hasta Takip Modülü</li>
-                            <li><i class="fa fa-calendar"></i> Randevu Modülü</li>
-                            <li><i class="fa fa-credit-card"></i> Muhasebe Modülü</li>
-                            <li><i class="fa fa-shopping-cart"></i> Stok Modülü</li>
-                            <li><i class="fa fa-pie-chart"></i> Raporlama Modülü</li>
-                            <li><i class="fa fa-whatsapp"></i> CRM Modülü</li>
-                            <li><i class="fa fa-flask"></i> Laboratuvar İstek Modülü</li>
-                            <li><i class="fa fa-cog"></i> Firma Klinik Modülü</li>
-                            <li><i class="fa fa-plug"></i> Entegrasyonlar</li>
-                            <!-- li><i class="fa fa-shield"></i> Güvenlik</li>   
-                            <li><i class="fa fa-picture-o"></i> Röntgen ve Dijital Görüntüleme</li-->
-                        </ul>
                     </div>
                 </div>
                 <div class="homeright">
-                    <!-- https://colorlib.com/etc/lf/Login_v4/index.html -->
-                    <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-                        <!--form action="https://getsimpleform.com/messages?form_api_token=bf03ed7e99824273d92798b4ae4a63fa" method="post" id="contact"-->
-                        <!--form method="POST" action="http://formspree.io/nemoxn@gmail.com"-->
-                        <!--form action="https://19test.github.io/" method="post" id="contact"-->
-                        <form class="login100-form validate-form" action="#" method="post" id="sign_up">
-                            <span class="login100-form-title p-b-49">
-                                Kaydolun
-                            </span>
-
-                            <div class="wrap-input100 validate-input m-b-23" data-validate="Firma adı gereklidir">
-                                <span class="label-input100">Firma Adı</span>
-                                <input class="input100" type="text" name="name" placeholder="Firma Adı">
-                                <span class="focus-input100" data-symbol="☆"></span>
-                            </div>
-                            <br>
-                            <div class="wrap-input100 validate-input m-b-23" data-validate="Ad soyad gereklidir"> <span class="label-input100">Ad Soyad</span>
-                                <input class="input100" type="text" name="username" placeholder="Ad Soyad">
-                                <span class="focus-input100" data-symbol="&#xf206;"></span>
-                            </div>
-                            <br>
-                            <div class="wrap-input100 validate-input" data-validate="Cep telefonu gereklidir">
-                                <span class="label-input100">Cep Telefonu</span>
-                                <input class="input100" type="phone" name="phone" pattern="^05(0[5-7]|[3-5]\d)\d{3}\d{4}$" title="Lütfen geçerli bir telefon numarası giriniz" placeholder="05XXXXXXXXX">
-                                <span class="focus-input100" data-symbol="📞"></span>
-                            </div>
-                            <div class="text-right p-t-8 p-b-31">
-                                <a href="#">
-                                    * Yeni şifre gönderilecek
-                                </a>
-                            </div>
-                            <br>
-                            <div class="text-right p-t-8 p-b-31 g-recaptcha" data-sitekey="6Lcn7z4UAAAAAFAOf3qcWDt5BraTQIQNDnV5Al4o" data-callback="btn_enable"></div>
-                            <br>
-                            <div class="container-login100-form-btn">
-                                <div class="wrap-login100-form-btn">
-                                    <div class="login100-form-bgbtn"></div>
-                                    <button class="login100-form-btn btn" disabled id="btnSubmit" style="font-family: Poppins-Regular;">
-                                        <img id="btnIcon" class="login100form-icon" src="img/logo.png" width="36"> &nbsp;&nbsp;
-                                        <b>Ücretsiz kullanmaya başlayın</b>
-                                        <!-- ∞ -->
-                                    </button>
-                                    </a>
-                                </div>
-                            </div>
-                            <br> *30 gün ücretsiz deneme için kredi kartı gerekmiyor.
+                    <div class="form-wrapper">
+                        <form id="notify-me" data-validate="parsley">
+                        <label for="phone">
+                            <input type="tel" id="phone" type="number" name="phone" required="required" placeholder="530-555-5555" data-parsley-ui-enabled="false" data-parsley-minlength="14" data-parsley-maxlength="14" class="phone"/>
+                            <i class="fa fa-phone input-icon"></i>
+                        </label>
+                        <button type="submit">
+                            <span>Ücretsiz Kullanmaya Başlayın</span>
+                        </button>
                         </form>
                     </div>
                 </div>
@@ -425,7 +373,11 @@
     <script src="js/faq.js"></script>
     <script src="js/transformicons.min.js"></script>
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/jquery.fullPage.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.4/parsley.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js'></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
+    <script src="js/mainform.js"></script>
+
 
     <script type="text/javascript">
     // Submit butonunu loading state'e getir
