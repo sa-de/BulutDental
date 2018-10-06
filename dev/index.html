@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>BulutDental | Bulut Dental</title>
+    <meta name="description" content="Bulut Dental">
+    <!-- Stylesheet -->
+    <link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://eistatistik.com/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <link rel="stylesheet" type="text/css" href="css/scroll.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/faq.css" />
+    <link rel="stylesheet" type="text/css" href="css/pricing.css" />
+    <link rel="stylesheet" type="text/css" href="css/social.css" />
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sade.app/BulutDental/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sade.app/BulutDental/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sade.app/BulutDental/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://sade.app/BulutDental/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/parsley.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <nav class="tabs">
+        <a href="#pageHome"><img class="logo" src="img/logo-white-text.png" height="35px"></a>
+        <div class="menuler">
+            <div class="selector"></div>
+            <a href="#pageHome" id="pageHomeId" class="active">ANA SAYFA</a>
+            <a href="#pageFeatures" id="pageFeaturesId">ÖZELLİKLER</a>
+            <a href="#pageDifference" id="pageDifferenceId">FARKIMIZ</a>
+            <a href="#pagePricing" id="pagePricingId">FİYATLANDIRMA</a>
+            <a href="#pageFAQ" id="pageFAQId">SSS</a>
+            <a href="#pageContact" id="pageContactId">İLETİŞİM</a>
+        </div>
+        <div id="toggle-menu">
+            <input type="checkbox" id="toggle-nav" />
+            <label id="toggle-nav-label" for="toggle-nav"><i class="icon-reorder"></i></label>
+            <div class="box">
+                <ul>
+                    <li><a href="#pageHome">ANA SAYFA</a></li>
+                    <li><a href="#pageFeatures">ÖZELLİKLER</a></li>
+                    <li><a href="#pageDifference">FARKIMIZ</a></li>
+                    <li><a href="#pagePricing">FİYATLANDIRMA</a></li>
+                    <li><a href="#pageFAQ">SSS</a></li>
+                    <li><a href="#pageContact">İLETİŞİM</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="homegrid">
+                <div class="fullscreen-bg">
+                    <video loop muted autoplay data-autoplay class="fullscreen-bg__video">
+                        <source src="video/Clouds.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="homeleft">
+                    <div class="banner-text">
+                        <p>
+                            Her zaman, her yerde, her cihazla<br>
+                            güvenli erişim sağlayın.
+                        </p>
+                    </div>
+                </div>
+                <div class="homeright">
+                    <div class="form-wrapper">
+                        <form id="notify-me" data-validate="parsley">
+                        <label for="phone">
+                            <input type="tel" id="phone" type="number" name="phone" required="required" placeholder="530-555-5555" data-parsley-ui-enabled="false" data-parsley-minlength="14" data-parsley-maxlength="14" class="phone"/>
+                            <i class="fa fa-phone input-icon"></i>
+                        </label>
+                        <button type="submit">
+                            <span>Ücretsiz Kullanmaya Başlayın</span>
+                        </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="slide">
+                <div class="slidewrapper">
+                    <div class="baslik">Özellikler</div>
+                    <div class="yazi1">
+                        <span style="font-weight: bold;font-size: 1.3em;">Hasta Takip Modülü</span>
+                        <br> Hasta dosyanızda daha detaylı bilgi tutun. Tek bir ekrandan tüm süreci kolay bir şekilde yönetin.
+                    </div>
+                    <div class="yazi2">
+                        <span style="font-weight: bold;font-size: 1.3em;">Randevu Modülü</span>
+                        <br> İster web arayüzünüzden ister otomasyon sistemi üzerinden randevu talebini oluşturun. SMS ile hatırlatın.
+                    </div>
+                    <div class="yazi3">
+                        <span style="font-weight: bold;font-size: 1.3em;">Muhasebe Modülü</span>
+                        <br> Kliniğize ait tüm mali gelir-gider durumlarını yönetin.
+                    </div>
+                    <div class="yazi4">
+                        <span style="font-weight: bold;font-size: 1.3em;">Stok Modülü</span>
+                        <br> Ayrıntılı bir stok takip modülü sizleri bekliyor.
+                    </div>
+                    <div class="yazi5">
+                        <span style="font-weight: bold;font-size: 1.3em;">Raporlama Modülü</span>
+                        <br> Kliniğin tüm parametrelerini ayrıntılı bir şekilde günlük, haftalık, aylık olarak raporlayın.
+                    </div>
+                    <div class="yazi6">
+                        <span style="font-weight: bold;font-size: 1.3em;">Yedekleme, Güvenlik</span>
+                        <br> Verilerinizi düzenli olarak güven içerisinde yedekliyoruz.
+                    </div>
+                    <div class="dis" id="dis1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section static_background" id="section2">
+            <div class="slide" id="slide1">
+                <div class="slidewrapper">
+                    <div class="nav"></div>
+                    <div class="baslik">Farkımız</div>
+                    <div class="yazi1">
+                        <span style="font-weight: bold;font-size: 1.3em;">Laboratuvar İstek Modülü<span class="plus_sign"></span></span>
+                        <br> Laboratuvar isteklerini otomatik üretme. Tüm sürecin takibi. Bilgilendirmeler. Hatırlatıcılar.
+                    </div>
+                    <div class="yazi2">
+                        <span style="font-weight: bold;font-size: 1.3em;">Web Sayfası</span>
+                        <br> Kliniğiniz için ayrıca web sayfası satın almanıza gerek yok. Tek ekrandan web sayfanızı yönetin. Kendinize ait alan adı kullanabilirsiniz. Kurumsallığınızı arttırın.
+                    </div>
+                    <div class="yazi3">
+                        <span style="font-weight: bold;font-size: 1.3em;">Online Randevu<span class="plus_sign"></span></span>
+                        <br> Otomasyondan yönetilen web sayfanız üzerinden hastalarınız randebvu talebinde bulunabilir.
+                    </div>
+                    <div class="yazi4">
+                        <span style="font-weight: bold;font-size: 1.3em;">Timeline</span>
+                        <br> Hastanızla ilgili tüm tarihçeyi tek bir ekrandan özelleştirilmiş tasarımlarla görün.
+                    </div>
+                    <div class="yazi5">
+                        <span style="font-weight: bold;font-size: 1.3em;">CRM<span class="plus_sign"></span></span>
+                        <br> Müşterilerinizle ilişkilerinizi güçlendirin. Sanal santralinizi entegre edin.
+                    </div>
+                    <div class="yazi6">
+                        <span style="font-weight: bold;font-size: 1.3em;">
+                        Tedavi Planlama<span class="plus_sign"></span></span>
+                        <br> Tek bir ekrandan proforma, fatura, laboratuvar istek oluşturma, randevular, ödeme detaylarını geliştirin.
+                    </div>
+                    <div id="dis2" class="dis"><img src="img/disyeni.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="intro">
+                <div class="pricingWrapper">
+                    <div class='pricing1 pricing-palden'>
+                        <div class='pricing-item'>
+                            <div class='pricing-deco'>
+                                <svg class='pricing-deco-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                                    <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A; c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                                    <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;    c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                                    <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;    H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                                    <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A; c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                                </svg>
+                                <div class='pricing-price'><span class='pricing-currency'>₺</span><span class="pricingpricing">65</span>
+                                    <span class='pricing-period'>/ Aylık</span>
+                                </div>
+                                <h3 class='pricing-title'>BASIC</h3>
+                            </div>
+                            <ul class='pricing-feature-list'>
+                                <li class='pricing-feature'>Laboratuvar İstek</li>
+                                <li class='pricing-feature'>Timeline</li>
+                                <li class='pricing-feature'>SMS</li>
+                                <li class='pricing-feature'>1 Kullanıcı</li>
+                                <li class='pricing-feature'>2 Doktor</li>
+                                <li class='pricing-feature'> &nbsp; </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <div class="container-login100-form-btn">
+                                    <div class="wrap-login100-form-btn">
+                                        <div class="login100-form-bgbtn"></div>
+                                        <a href="#pageHome">
+                                            <button class="login100-form-btn btn">
+                                                <b>Ücretsiz kullanmaya başlayın</b>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="switch switch-blue">
+                        <input type="radio" class="switch-input" name="view2" value="week2" id="week2" checked>
+                        <label for="week2" class="switch-label switch-label-off">Aylık</label>
+                        <input type="radio" class="switch-input" name="view2" value="month2" id="month2">
+                        <label for="month2" class="switch-label switch-label-on">Yıllık</label>
+                        <span class="switch-selection"></span>
+                    </div>
+                    <div class='pricing2 pricing-palden'>
+                        <div class='pricing-item'>
+                            <div class='pricing-deco'>
+                                <svg class='pricing-deco-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                                    <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A; c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                                    <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;    c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                                    <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;    H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                                    <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A; c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                                </svg>
+                                <div class='pricing-price'><span class='pricing-currency'>₺</span><span class="pricingpricing">95</span>
+                                    <span class='pricing-period'>/ Aylık</span>
+                                </div>
+                                <h3 class='pricing-title'>PREMIUM</h3>
+                            </div>
+                            <ul class='pricing-feature-list'>
+                                <li class='pricing-feature'>Tüm BASIC Özellikler</li>
+                                <li class='pricing-feature'>CRM</li>
+                                <li class='pricing-feature'>Stok</li>
+                                <li class='pricing-feature'>Web Sayfası</li>
+                                <li class='pricing-feature'>Sınırsız Kullanıcı</li>
+                                <li class='pricing-feature'>Sınırsız Doktor</li>
+                            </ul>
+                            <div class="pricing-action">
+                                <div class="container-login100-form-btn">
+                                    <div class="wrap-login100-form-btn">
+                                        <div class="login100-form-bgbtn"></div>
+                                        <a href="#pageHome">
+                                            <button class="login100-form-btn btn">
+                                                <b>Ücretsiz kullanmaya başlayın</b>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div class="intro">
+                <div class="faqwrapper">
+                    <div class="imagefaq"></div>
+                    <div class="faqbaslik">Sıkça Sorulan Sorular</div>
+                    <div class="faqcontent">
+                        <div class="toggle">
+                            <div class="toggle-title ">
+                                <h3>
+                            <button type="button" class="tcon tcon-plus tcon-plus--minus"></button>
+                           <span class="title-name">Nasıl Üye Olabilirim ?</span>
+                            </h3>
+                            </div>
+                            <div class="toggle-inner">
+                                <ul>
+                                    <li>Anasayfada “ÜYE GİRİŞİ” bölümüne tıklayın</li>
+                                    <li>Açılan sayfada “YENİ ÜYE” bölümünü tıklayın</li>
+                                    <li>Bilgilerinizi eksiksiz doldurun ve şifrenizi oluşturun.</li>
+                                    <li>Anasayfada “ÜYE GİRİŞİ” bölümüne şifrenizle giriş yapın</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- END OF TOGGLE -->
+                        <div class="toggle">
+                            <div class="toggle-title ">
+                                <h3>
+                        <button type="button" class="tcon tcon-plus tcon-plus--minus"></button>
+                        <span class="title-name">Nasıl Giriş Yaparım ?</span>
+                        </h3>
+                            </div>
+                            <div class="toggle-inner">
+                                <ul>
+                                    <li>Anasayfada “ÜYE GİRİŞİ” bölümüne tıklayın</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- END OF TOGGLE -->
+                        <div class="toggle">
+                            <div class="toggle-title ">
+                                <h3>
+                <button type="button" class="tcon tcon-plus tcon-plus--minus"></button>
+                <span class="title-name">Nasıl Mutlu Olabilirim ?</span>
+                </h3>
+                            </div>
+                            <div class="toggle-inner">
+                                <ul>
+                                    <li>Anasayfada “ÜYE GİRİŞİ” bölümüne şifrenizle giriş yapın.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- END OF TOGGLE -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section5">
+            <div class="intro">
+                <div class="contactWrapper">
+                    <div class="contactTanitim">
+                        <div class="tanitimBaslik"></div>
+                        <div class="tanitimIcerik">
+                            <table class="table-fill">
+                                <tbody class="table-hover">
+                                    <tr>
+                                        <td style="text-align: right;font-size: 30px"><i class="fa fa-phone" aria-hidden="true"></i></td>
+                                        <td class="text-left">Telefon</td>
+                                        <td class="text-left">0362 475 56 56</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;font-size: 45px"><i class="fa fa-mobile" aria-hidden="true"></i></td>
+                                        <td class="text-left">GSM</td>
+                                        <td class="text-left">0538 615 04 44</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;font-size: 25px"><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                                        <td class="text-left">E-posta</td>
+                                        <td class="text-left">info@mg.bulut.dental</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;font-size: 40px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                                        <td class="text-left">Adres</td>
+                                        <td class="text-left">
+                                            Körfez Mahallesi.19 Mayıs Kümesi.
+                                            <br> Küme Evleri.No:188-14 Atakum-Samsun </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tanitimSosyalMedya">
+                            <ul class="social-networks spin-icon">
+                                <li><a href="https://facebook.com/bulut.dental.official" class="icon-facebook">Facebook</a></li>
+                                <li><a href="https://twitter.com/cloud_dental" class="icon-twitter">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/cloud.dental/" class="icon-instagram">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contactForm">
+                        <span style="font-weight: bold;font-size: 130%;">İLETİŞİM FORMU</span>
+                        <form class="contactFormInput" action="https://getsimpleform.com/messages?form_api_token=a89dc01710f2294ec2e4e70b40e6dcd8" method="post">
+                            <input type='hidden' name='redirect_to' value='https://sade.app/BulutDental/' />
+                            <input name="name" type="text" class="feedback-input" placeholder="İsim" />
+                            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                            <textarea name="text" class="feedback-input" placeholder="Yorum"></textarea>
+                            <input type="submit" class="gonder" value="GÖNDER" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="getCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Otomasyon Kayıt Talebi</h4>
+                </div>
+                <div class="modal-body" id="getCode" style="overflow-x: scroll;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/transformicons.min.js"></script>
+    <script type="text/javascript" src="https://alvarotrigo.com/fullPage/jquery.fullPage.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
+    <script src="js/mainform.js"></script>
+
+
+    <script type="text/javascript">
+    // Submit butonunu loading state'e getir
+    function btn_loading_state() {
+        btn_disabled();
+
+        $("#btnSubmit").removeClass("login100-form-btn");
+        $("#btnSubmit").addClass("btn-loading");
+
+        $("#btnSubmit").html("<b>Talebiniz İşleniyor</b><span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
+        $("img#btnIcon").remove(".login100form-icon");
+    }
+
+    // Submit butonunu default state'e dondur
+    function btn_default_state() {
+        btn_enable();
+
+        $("#btnSubmit").removeClass("btn-loading");
+        $("#btnSubmit").addClass("login100-form-btn");
+
+        $("#btnSubmit").html("<img id='btnIcon' class='login100form-icon' src='img/logo.png' width='36'>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>");
+        $("span").remove(".tcon-loader--spinner360,.tcon-visuallyhidden");
+    }
+    
+    function btn_disabled() {
+        $('#btnSubmit').prop("disabled", true);
+    }
+
+    function btn_enable() {
+        // alert("callback working");
+        $('#btnSubmit').prop("disabled", false);
+    }
+
+    $("#btnSubmit").click(function() {
+        btn_loading_state();
+
+        $("#sign_up").submit();
+    });
+
+    $(".switch").on("click", ".switch-label-off", function() {
+        $(".pricing1 .pricing-price .pricingpricing").html(65);
+        $(".pricing1 .pricing-price .pricing-period").html('/ Aylık');
+
+        $(".pricing2 .pricing-price .pricingpricing").html(95);
+        $(".pricing2 .pricing-price .pricing-period").html('/ Aylık');
+
+    });
+
+    $(".switch").on("click", ".switch-label-on", function() {
+        $(".pricing1 .pricing-price .pricingpricing").html(650);
+        $(".pricing1 .pricing-price .pricing-period").html('/ Yıllık');
+
+        $(".pricing2 .pricing-price .pricingpricing").html(950);
+        $(".pricing2 .pricing-price .pricing-period").html('/ Yıllık');
+
+    });
+
+    // Usage: menu_active_animate("pageDifference");
+    function menu_active_animate(anchorLink) {
+        // var anchorLink = anchors[nextIndex - 1];
+        var submenu = $("#" + anchorLink + "Id");
+
+        console.log("anchorLink: ", anchorLink);
+        console.log("submenu: ", submenu);
+
+        $('.menuler a').removeClass("active");
+        submenu.addClass('active');
+
+        var activeWidth = submenu.innerWidth();
+        var itemPos = submenu.position();
+
+        console.log("itemPos: ", itemPos);
+
+        if (itemPos) {
+            $(".selector").css({
+                "left": itemPos.left + "px",
+                "width": activeWidth + "px"
+            });
+        }
+    }
+
+    // Menu: ust menuye tiklaninca animasyon efekt ver      
+    $(".menuler").on("click", "a", function() {
+        $('.menuler a').removeClass("active");
+        $(this).addClass('active');
+
+        // console.log("This: ", this);
+
+        var activeWidth = $(this).innerWidth();
+        var itemPos = $(this).position();
+
+        $(".selector").css({
+            "left": itemPos.left + "px",
+            "width": activeWidth + "px"
+        });
+    });
+
+    jQuery(window).load(function() {
+        // Sayfa yuklendiginde url paterninde #pageFooId olmadiginda menu animasyon efekt ver
+        // pageHomeId -> pageHome
+        var anchorLink = $('.menuler a.active').attr('id').split("Id")[0];
+        menu_active_animate(anchorLink);
+    });
+
+    $(document).ready(function() {
+        var anchors = ['pageHome', 'pageFeatures', 'pageDifference', 'pagePricing', 'pageFAQ', 'pageContact'];
+        var navigationTooltips = ['Ana Sayfa', 'Özellikler', 'Farkımız', 'Fiyatlandırma', 'SSS', 'İletişim'];
+
+        $('#fullpage').fullpage({
+            anchors: anchors,
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: navigationTooltips,
+            responsiveWidth: 992,
+            responsiveHeight: 654,
+
+            onLeave: function(index, nextIndex, direction) {
+                // Slide gecislerinde menu animasyon efekt ver
+                var anchorLink = anchors[nextIndex - 1];
+                menu_active_animate(anchorLink);
+                console.log("onLeave: ", anchorLink, "; nextIndex: ", nextIndex);
+
+                if (anchorLink == 'pageFeatures') {
+                    $('#section1 .yazi1').addClass('animated fadeInLeft');
+                    $('#section1 .yazi2').addClass('animated fadeInLeft');
+                    $('#section1 .yazi3').addClass('animated fadeInLeft');
+                    $('#section1 .yazi4').addClass('animated fadeInRight');
+                    $('#section1 .yazi5').addClass('animated fadeInRight');
+                    $('#section1 .yazi6').addClass('animated fadeInRight');
+                }
+
+                if (anchorLink == 'pageDifference') {
+                    $('#dis2 img').removeClass('animated pulse');
+
+                    $('#section2').removeClass('static_background');
+                    $('#section2').removeClass('gradient_animation');
+                    $('#section2').addClass('gradient_animation');
+
+                    $('#section2 .yazi1').addClass('animated fadeInLeft');
+                    $('#section2 .yazi2').addClass('animated fadeInLeft');
+                    $('#section2 .yazi3').addClass('animated fadeInLeft');
+                    $('#section2 .yazi4').addClass('animated fadeInRight');
+                    $('#section2 .yazi5').addClass('animated fadeInRight');
+                    $('#section2 .yazi6').addClass('animated fadeInRight');
+                } else {
+                    $('#section2').addClass('static_background');
+                    $('#section2').removeClass('gradient_animation');
+                }
+            },
+
+            afterLoad: function(anchorLink, index) {
+                // NOTE: Burada verilecek animasyon sayfa yuklendikten sonra devreye girdiginden kotu bir etki birakir.
+                // menu_active_animate(anchorLink);
+                if (anchorLink == 'pageDifference') {
+                    $('#dis2 img').addClass('animated pulse');
+
+                    $('#section2').removeClass('static_background');
+                    $('#section2').removeClass('gradient_animation');
+                    $('#section2').addClass('gradient_animation');
+
+                    $('.yazi1').removeClass('animated fadeInLeft');
+                    $('.yazi2').removeClass('animated fadeInLeft');
+                    $('.yazi3').removeClass('animated fadeInLeft');
+                    $('.yazi4').removeClass('animated fadeInRight');
+                    $('.yazi5').removeClass('animated fadeInRight');
+                    $('.yazi6').removeClass('animated fadeInRight');
+
+                }
+            }
+        });
+        $('#btnSubmit').prop("disabled", true);
+    });
+
+    var frm = $('#notify-me');
+    frm.submit(function(ev) {
+        // alert("#sign_up submit tetiklendi");
+        $.ajax({
+            type: 'POST',
+            url: 'https://api.bulut.dental/v1/public/firm',
+            data: frm.serialize(),
+            dataType: 'json',
+            // islem basarılı ise
+            success: function(data, status, xml) {
+                var item;
+
+                item = "Sayın Kullanıcı,"; // + data["data"].name;
+                item += "<br> Kayıt talebiniz alınmıştır. En kısa zamanda telefon numaranıza SMS ile dönüş sağlanacaktır.";
+
+                $("#getCode").html(item);
+
+                $("#getCodeModal").modal('show');
+                
+                btn_default_state();
+                
+                console.log("SUCCESS");
+                console.log("data: ", data);
+                console.log("status: ", status);
+                console.log("xml: ", xml);
+
+                window.setTimeout(function() {
+                    $("#getCodeModal").modal('hide');
+
+                    // https://stackoverflow.com/questions/3786694/how-to-reset-clear-form-through-javascript
+                    // frm.reset(); // Not working!!!
+                    document.getElementById("sign_up").reset();
+
+                    // OLD: 10 saniye sonra yonlendirme
+                    // window.location.href = data.data[0].url;
+                }, 10000);
+            },
+            // islem basarısız ise
+            error: function(xml, status, error) {
+                var item = "Kayıt başarısız.";
+
+                $("#getCode").html(item);
+
+                $("#getCodeModal").modal('show');
+
+                btn_default_state();
+
+                console.log("ERROR");
+                console.log("xml: ", xml);
+                console.log("status: ", status);
+                console.log("error: ", error);
+            },
+            // son
+            complete: function(xml, status) {}
+        });
+
+        // tekrarı onle
+        ev.preventDefault();
+    });
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5b9a7f92c666d426648abc14/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+</body>
+
+</html>

@@ -431,16 +431,21 @@
     // Submit butonunu loading state'e getir
     function btn_loading_state() {
         btn_disabled();
+
         $("#btnSubmit").removeClass("login100-form-btn");
         $("#btnSubmit").addClass("btn-loading");
+
         $("#btnSubmit").html("<b>Talebiniz İşleniyor</b><span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
         $("img#btnIcon").remove(".login100form-icon");
     }
+
     // Submit butonunu default state'e dondur
     function btn_default_state() {
         btn_enable();
+
         $("#btnSubmit").removeClass("btn-loading");
         $("#btnSubmit").addClass("login100-form-btn");
+
         $("#btnSubmit").html("<img id='btnIcon' class='login100form-icon' src='img/logo.png' width='36'>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>");
         $("span").remove(".tcon-loader--spinner360,.tcon-visuallyhidden");
     }
@@ -448,37 +453,52 @@
     function btn_disabled() {
         $('#btnSubmit').prop("disabled", true);
     }
+
     function btn_enable() {
         // alert("callback working");
         $('#btnSubmit').prop("disabled", false);
     }
+
     $("#btnSubmit").click(function() {
         btn_loading_state();
+
         $("#sign_up").submit();
     });
+
     $(".switch").on("click", ".switch-label-off", function() {
         $(".pricing1 .pricing-price .pricingpricing").html(65);
         $(".pricing1 .pricing-price .pricing-period").html('/ Aylık');
+
         $(".pricing2 .pricing-price .pricingpricing").html(95);
         $(".pricing2 .pricing-price .pricing-period").html('/ Aylık');
+
     });
+
     $(".switch").on("click", ".switch-label-on", function() {
         $(".pricing1 .pricing-price .pricingpricing").html(650);
         $(".pricing1 .pricing-price .pricing-period").html('/ Yıllık');
+
         $(".pricing2 .pricing-price .pricingpricing").html(950);
         $(".pricing2 .pricing-price .pricing-period").html('/ Yıllık');
+
     });
+
     // Usage: menu_active_animate("pageDifference");
     function menu_active_animate(anchorLink) {
         // var anchorLink = anchors[nextIndex - 1];
         var submenu = $("#" + anchorLink + "Id");
+
         console.log("anchorLink: ", anchorLink);
         console.log("submenu: ", submenu);
+
         $('.menuler a').removeClass("active");
         submenu.addClass('active');
+
         var activeWidth = submenu.innerWidth();
         var itemPos = submenu.position();
+
         console.log("itemPos: ", itemPos);
+
         if (itemPos) {
             $(".selector").css({
                 "left": itemPos.left + "px",
@@ -486,27 +506,34 @@
             });
         }
     }
+
     // Menu: ust menuye tiklaninca animasyon efekt ver      
     $(".menuler").on("click", "a", function() {
         $('.menuler a').removeClass("active");
         $(this).addClass('active');
+
         // console.log("This: ", this);
+
         var activeWidth = $(this).innerWidth();
         var itemPos = $(this).position();
+
         $(".selector").css({
             "left": itemPos.left + "px",
             "width": activeWidth + "px"
         });
     });
+
     jQuery(window).load(function() {
         // Sayfa yuklendiginde url paterninde #pageFooId olmadiginda menu animasyon efekt ver
         // pageHomeId -> pageHome
         var anchorLink = $('.menuler a.active').attr('id').split("Id")[0];
         menu_active_animate(anchorLink);
     });
+
     $(document).ready(function() {
         var anchors = ['pageHome', 'pageFeatures', 'pageDifference', 'pagePricing', 'pageFAQ', 'pageContact'];
         var navigationTooltips = ['Ana Sayfa', 'Özellikler', 'Farkımız', 'Fiyatlandırma', 'SSS', 'İletişim'];
+
         $('#fullpage').fullpage({
             anchors: anchors,
             navigation: true,
@@ -514,11 +541,13 @@
             navigationTooltips: navigationTooltips,
             responsiveWidth: 992,
             responsiveHeight: 654,
+
             onLeave: function(index, nextIndex, direction) {
                 // Slide gecislerinde menu animasyon efekt ver
                 var anchorLink = anchors[nextIndex - 1];
                 menu_active_animate(anchorLink);
                 console.log("onLeave: ", anchorLink, "; nextIndex: ", nextIndex);
+
                 if (anchorLink == 'pageFeatures') {
                     $('#section1 .yazi1').addClass('animated fadeInLeft');
                     $('#section1 .yazi2').addClass('animated fadeInLeft');
@@ -527,11 +556,14 @@
                     $('#section1 .yazi5').addClass('animated fadeInRight');
                     $('#section1 .yazi6').addClass('animated fadeInRight');
                 }
+
                 if (anchorLink == 'pageDifference') {
                     $('#dis2 img').removeClass('animated pulse');
+
                     $('#section2').removeClass('static_background');
                     $('#section2').removeClass('gradient_animation');
                     $('#section2').addClass('gradient_animation');
+
                     $('#section2 .yazi1').addClass('animated fadeInLeft');
                     $('#section2 .yazi2').addClass('animated fadeInLeft');
                     $('#section2 .yazi3').addClass('animated fadeInLeft');
@@ -543,25 +575,30 @@
                     $('#section2').removeClass('gradient_animation');
                 }
             },
+
             afterLoad: function(anchorLink, index) {
                 // NOTE: Burada verilecek animasyon sayfa yuklendikten sonra devreye girdiginden kotu bir etki birakir.
                 // menu_active_animate(anchorLink);
                 if (anchorLink == 'pageDifference') {
                     $('#dis2 img').addClass('animated pulse');
+
                     $('#section2').removeClass('static_background');
                     $('#section2').removeClass('gradient_animation');
                     $('#section2').addClass('gradient_animation');
+
                     $('.yazi1').removeClass('animated fadeInLeft');
                     $('.yazi2').removeClass('animated fadeInLeft');
                     $('.yazi3').removeClass('animated fadeInLeft');
                     $('.yazi4').removeClass('animated fadeInRight');
                     $('.yazi5').removeClass('animated fadeInRight');
                     $('.yazi6').removeClass('animated fadeInRight');
+
                 }
             }
         });
         $('#btnSubmit').prop("disabled", true);
     });
+
     var frm = $('#sign_up');
     frm.submit(function(ev) {
         // alert("#sign_up submit tetiklendi");
@@ -573,9 +610,12 @@
             // islem basarılı ise
             success: function(data, status, xml) {
                 var item;
-                item = "Sayın Kullanıcı;";
+
+                item = "Sayın " + data["data"].name;
                 item += "<br> Kayıt talebiniz alınmıştır. En kısa zamanda telefon numaranıza SMS ile dönüş sağlanacaktır.";
+
                 $("#getCode").html(item);
+
                 $("#getCodeModal").modal('show');
                 
                 btn_default_state();
@@ -584,11 +624,14 @@
                 console.log("data: ", data);
                 console.log("status: ", status);
                 console.log("xml: ", xml);
+
                 window.setTimeout(function() {
                     $("#getCodeModal").modal('hide');
+
                     // https://stackoverflow.com/questions/3786694/how-to-reset-clear-form-through-javascript
                     // frm.reset(); // Not working!!!
                     document.getElementById("sign_up").reset();
+
                     // OLD: 10 saniye sonra yonlendirme
                     // window.location.href = data.data[0].url;
                 }, 10000);
@@ -596,9 +639,13 @@
             // islem basarısız ise
             error: function(xml, status, error) {
                 var item = "Kayıt başarısız.";
+
                 $("#getCode").html(item);
+
                 $("#getCodeModal").modal('show');
+
                 btn_default_state();
+
                 console.log("ERROR");
                 console.log("xml: ", xml);
                 console.log("status: ", status);
@@ -607,9 +654,11 @@
             // son
             complete: function(xml, status) {}
         });
+
         // tekrarı onle
         ev.preventDefault();
     });
+
     var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
     (function() {
