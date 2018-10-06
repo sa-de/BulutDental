@@ -34,6 +34,11 @@
     <link rel="manifest" href="https://sade.app/BulutDental/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/parsley.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+
 </head>
 
 <body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
@@ -73,74 +78,22 @@
                 </div>
                 <div class="homeleft">
                     <div class="banner-text">
-                        <h1>Bulut <strong>Diş Kliniği</strong> <br>Otomasyonu</h1>
                         <p>
                             Her zaman, her yerde, her cihazla<br>
                             güvenli erişim sağlayın.
                         </p>
-                        <br>
-                        <ul>
-                            <li><i class="fa fa-user"></i> Hasta Takip Modülü</li>
-                            <li><i class="fa fa-calendar"></i> Randevu Modülü</li>
-                            <li><i class="fa fa-credit-card"></i> Muhasebe Modülü</li>
-                            <li><i class="fa fa-shopping-cart"></i> Stok Modülü</li>
-                            <li><i class="fa fa-pie-chart"></i> Raporlama Modülü</li>
-                            <li><i class="fa fa-whatsapp"></i> CRM Modülü</li>
-                            <li><i class="fa fa-flask"></i> Laboratuvar İstek Modülü</li>
-                            <li><i class="fa fa-cog"></i> Firma Klinik Modülü</li>
-                            <li><i class="fa fa-plug"></i> Entegrasyonlar</li>
-                            <!-- li><i class="fa fa-shield"></i> Güvenlik</li>   
-                            <li><i class="fa fa-picture-o"></i> Röntgen ve Dijital Görüntüleme</li-->
-                        </ul>
                     </div>
                 </div>
                 <div class="homeright">
-                    <!-- https://colorlib.com/etc/lf/Login_v4/index.html -->
-                    <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-                        <!--form action="https://getsimpleform.com/messages?form_api_token=bf03ed7e99824273d92798b4ae4a63fa" method="post" id="contact"-->
-                        <!--form method="POST" action="http://formspree.io/nemoxn@gmail.com"-->
-                        <!--form action="https://19test.github.io/" method="post" id="contact"-->
-                        <form class="login100-form validate-form" action="#" method="post" id="sign_up">
-                            <span class="login100-form-title p-b-49">
-                                Kaydolun
-                            </span>
-
-                            <div class="wrap-input100 validate-input m-b-23" data-validate="Firma adı gereklidir">
-                                <span class="label-input100">Firma Adı</span>
-                                <input class="input100" type="text" name="name" placeholder="Firma Adı">
-                                <span class="focus-input100" data-symbol="☆"></span>
-                            </div>
-                            <br>
-                            <div class="wrap-input100 validate-input m-b-23" data-validate="Ad soyad gereklidir"> <span class="label-input100">Ad Soyad</span>
-                                <input class="input100" type="text" name="username" placeholder="Ad Soyad">
-                                <span class="focus-input100" data-symbol="&#xf206;"></span>
-                            </div>
-                            <br>
-                            <div class="wrap-input100 validate-input" data-validate="Cep telefonu gereklidir">
-                                <span class="label-input100">Cep Telefonu</span>
-                                <input class="input100" type="phone" name="phone" pattern="^05(0[5-7]|[3-5]\d)\d{3}\d{4}$" title="Lütfen geçerli bir telefon numarası giriniz" placeholder="05XXXXXXXXX">
-                                <span class="focus-input100" data-symbol="📞"></span>
-                            </div>
-                            <div class="text-right p-t-8 p-b-31">
-                                <a href="#">
-                                    * Yeni şifre gönderilecek
-                                </a>
-                            </div>
-                            <br>
-                            <div class="text-right p-t-8 p-b-31 g-recaptcha" data-sitekey="6Lcn7z4UAAAAAFAOf3qcWDt5BraTQIQNDnV5Al4o" data-callback="btn_enable"></div>
-                            <br>
-                            <div class="container-login100-form-btn">
-                                <div class="wrap-login100-form-btn">
-                                    <div class="login100-form-bgbtn"></div>
-                                    <button class="login100-form-btn btn" disabled id="btnSubmit" style="font-family: Poppins-Regular;">
-                                        <img id="btnIcon" class="login100form-icon" src="img/logo.png" width="36"> &nbsp;&nbsp;
-                                        <b>Ücretsiz kullanmaya başlayın</b>
-                                        <!-- ∞ -->
-                                    </button>
-                                    </a>
-                                </div>
-                            </div>
-                            <br> *30 gün ücretsiz deneme için kredi kartı gerekmiyor.
+                    <div class="form-wrapper">
+                        <form id="notify-me" data-validate="parsley">
+                        <label for="phone">
+                            <input type="tel" id="phone" type="number" name="phone" required="required" placeholder="530-555-5555" data-parsley-ui-enabled="false" data-parsley-minlength="14" data-parsley-maxlength="14" class="phone"/>
+                            <i class="fa fa-phone input-icon"></i>
+                        </label>
+                        <button type="submit">
+                            <span>Ücretsiz Kullanmaya Başlayın</span>
+                        </button>
                         </form>
                     </div>
                 </div>
@@ -420,27 +373,33 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/transformicons.min.js"></script>
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/jquery.fullPage.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=tr" async defer></script>
+    <script src="js/mainform.js"></script>
+
 
     <script type="text/javascript">
     // Submit butonunu loading state'e getir
     function btn_loading_state() {
         btn_disabled();
+
         $("#btnSubmit").removeClass("login100-form-btn");
         $("#btnSubmit").addClass("btn-loading");
+
         $("#btnSubmit").html("<b>Talebiniz İşleniyor</b><span class='tcon-loader--spinner360' aria-label='loading'><span class='tcon-visuallyhidden'>loading</span></span>");
         $("img#btnIcon").remove(".login100form-icon");
     }
+
     // Submit butonunu default state'e dondur
     function btn_default_state() {
         btn_enable();
+
         $("#btnSubmit").removeClass("btn-loading");
         $("#btnSubmit").addClass("login100-form-btn");
+
         $("#btnSubmit").html("<img id='btnIcon' class='login100form-icon' src='img/logo.png' width='36'>&nbsp;&nbsp;<b>Ücretsiz kullanmaya başlayın</b>");
         $("span").remove(".tcon-loader--spinner360,.tcon-visuallyhidden");
     }
@@ -448,37 +407,52 @@
     function btn_disabled() {
         $('#btnSubmit').prop("disabled", true);
     }
+
     function btn_enable() {
         // alert("callback working");
         $('#btnSubmit').prop("disabled", false);
     }
+
     $("#btnSubmit").click(function() {
         btn_loading_state();
+
         $("#sign_up").submit();
     });
+
     $(".switch").on("click", ".switch-label-off", function() {
         $(".pricing1 .pricing-price .pricingpricing").html(65);
         $(".pricing1 .pricing-price .pricing-period").html('/ Aylık');
+
         $(".pricing2 .pricing-price .pricingpricing").html(95);
         $(".pricing2 .pricing-price .pricing-period").html('/ Aylık');
+
     });
+
     $(".switch").on("click", ".switch-label-on", function() {
         $(".pricing1 .pricing-price .pricingpricing").html(650);
         $(".pricing1 .pricing-price .pricing-period").html('/ Yıllık');
+
         $(".pricing2 .pricing-price .pricingpricing").html(950);
         $(".pricing2 .pricing-price .pricing-period").html('/ Yıllık');
+
     });
+
     // Usage: menu_active_animate("pageDifference");
     function menu_active_animate(anchorLink) {
         // var anchorLink = anchors[nextIndex - 1];
         var submenu = $("#" + anchorLink + "Id");
+
         console.log("anchorLink: ", anchorLink);
         console.log("submenu: ", submenu);
+
         $('.menuler a').removeClass("active");
         submenu.addClass('active');
+
         var activeWidth = submenu.innerWidth();
         var itemPos = submenu.position();
+
         console.log("itemPos: ", itemPos);
+
         if (itemPos) {
             $(".selector").css({
                 "left": itemPos.left + "px",
@@ -486,27 +460,34 @@
             });
         }
     }
+
     // Menu: ust menuye tiklaninca animasyon efekt ver      
     $(".menuler").on("click", "a", function() {
         $('.menuler a').removeClass("active");
         $(this).addClass('active');
+
         // console.log("This: ", this);
+
         var activeWidth = $(this).innerWidth();
         var itemPos = $(this).position();
+
         $(".selector").css({
             "left": itemPos.left + "px",
             "width": activeWidth + "px"
         });
     });
+
     jQuery(window).load(function() {
         // Sayfa yuklendiginde url paterninde #pageFooId olmadiginda menu animasyon efekt ver
         // pageHomeId -> pageHome
         var anchorLink = $('.menuler a.active').attr('id').split("Id")[0];
         menu_active_animate(anchorLink);
     });
+
     $(document).ready(function() {
         var anchors = ['pageHome', 'pageFeatures', 'pageDifference', 'pagePricing', 'pageFAQ', 'pageContact'];
         var navigationTooltips = ['Ana Sayfa', 'Özellikler', 'Farkımız', 'Fiyatlandırma', 'SSS', 'İletişim'];
+
         $('#fullpage').fullpage({
             anchors: anchors,
             navigation: true,
@@ -514,11 +495,13 @@
             navigationTooltips: navigationTooltips,
             responsiveWidth: 992,
             responsiveHeight: 654,
+
             onLeave: function(index, nextIndex, direction) {
                 // Slide gecislerinde menu animasyon efekt ver
                 var anchorLink = anchors[nextIndex - 1];
                 menu_active_animate(anchorLink);
                 console.log("onLeave: ", anchorLink, "; nextIndex: ", nextIndex);
+
                 if (anchorLink == 'pageFeatures') {
                     $('#section1 .yazi1').addClass('animated fadeInLeft');
                     $('#section1 .yazi2').addClass('animated fadeInLeft');
@@ -527,11 +510,14 @@
                     $('#section1 .yazi5').addClass('animated fadeInRight');
                     $('#section1 .yazi6').addClass('animated fadeInRight');
                 }
+
                 if (anchorLink == 'pageDifference') {
                     $('#dis2 img').removeClass('animated pulse');
+
                     $('#section2').removeClass('static_background');
                     $('#section2').removeClass('gradient_animation');
                     $('#section2').addClass('gradient_animation');
+
                     $('#section2 .yazi1').addClass('animated fadeInLeft');
                     $('#section2 .yazi2').addClass('animated fadeInLeft');
                     $('#section2 .yazi3').addClass('animated fadeInLeft');
@@ -543,26 +529,31 @@
                     $('#section2').removeClass('gradient_animation');
                 }
             },
+
             afterLoad: function(anchorLink, index) {
                 // NOTE: Burada verilecek animasyon sayfa yuklendikten sonra devreye girdiginden kotu bir etki birakir.
                 // menu_active_animate(anchorLink);
                 if (anchorLink == 'pageDifference') {
                     $('#dis2 img').addClass('animated pulse');
+
                     $('#section2').removeClass('static_background');
                     $('#section2').removeClass('gradient_animation');
                     $('#section2').addClass('gradient_animation');
+
                     $('.yazi1').removeClass('animated fadeInLeft');
                     $('.yazi2').removeClass('animated fadeInLeft');
                     $('.yazi3').removeClass('animated fadeInLeft');
                     $('.yazi4').removeClass('animated fadeInRight');
                     $('.yazi5').removeClass('animated fadeInRight');
                     $('.yazi6').removeClass('animated fadeInRight');
+
                 }
             }
         });
         $('#btnSubmit').prop("disabled", true);
     });
-    var frm = $('#sign_up');
+
+    var frm = $('#notify-me');
     frm.submit(function(ev) {
         // alert("#sign_up submit tetiklendi");
         $.ajax({
@@ -573,9 +564,12 @@
             // islem basarılı ise
             success: function(data, status, xml) {
                 var item;
+
                 item = "Sayın " + data["data"].name;
                 item += "<br> Kayıt talebiniz alınmıştır. En kısa zamanda telefon numaranıza SMS ile dönüş sağlanacaktır.";
+
                 $("#getCode").html(item);
+
                 $("#getCodeModal").modal('show');
                 
                 btn_default_state();
@@ -584,11 +578,14 @@
                 console.log("data: ", data);
                 console.log("status: ", status);
                 console.log("xml: ", xml);
+
                 window.setTimeout(function() {
                     $("#getCodeModal").modal('hide');
+
                     // https://stackoverflow.com/questions/3786694/how-to-reset-clear-form-through-javascript
                     // frm.reset(); // Not working!!!
                     document.getElementById("sign_up").reset();
+
                     // OLD: 10 saniye sonra yonlendirme
                     // window.location.href = data.data[0].url;
                 }, 10000);
@@ -596,9 +593,13 @@
             // islem basarısız ise
             error: function(xml, status, error) {
                 var item = "Kayıt başarısız.";
+
                 $("#getCode").html(item);
+
                 $("#getCodeModal").modal('show');
+
                 btn_default_state();
+
                 console.log("ERROR");
                 console.log("xml: ", xml);
                 console.log("status: ", status);
@@ -607,9 +608,11 @@
             // son
             complete: function(xml, status) {}
         });
+
         // tekrarı onle
         ev.preventDefault();
     });
+
     var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
     (function() {
